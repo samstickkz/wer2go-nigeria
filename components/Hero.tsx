@@ -390,8 +390,6 @@ export default function Hero() {
       className="relative overflow-hidden bg-cream"
       aria-roledescription="carousel"
       aria-label="wer2 GO highlights"
-      onPointerEnter={() => setPaused(true)}
-      onPointerLeave={() => setPaused(false)}
       onFocusCapture={() => setPaused(true)}
       onBlurCapture={(e) => {
         if (!e.currentTarget.contains(e.relatedTarget as Node)) setPaused(false);
