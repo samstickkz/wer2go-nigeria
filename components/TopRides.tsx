@@ -86,14 +86,15 @@ export default function TopRides() {
 
         <Reveal delay={0.1}>
           <div className="mt-10 flex flex-wrap justify-center gap-2 sm:gap-3">
-            {categories.map(({ id, label, Icon }) => {
+            {categories.map(({ id, label, Icon }, i) => {
               const isActive = active === id;
+              const hideOnMobile = i > 1; // keep "All rides" + "Standard" only on phones
               return (
                 <button
                   key={id}
                   type="button"
                   onClick={() => setActive(id)}
-                  className={`inline-flex items-center gap-2 rounded-full px-4 py-2 text-sm transition-all active:scale-[0.97] ${
+                  className={`${hideOnMobile ? "hidden md:inline-flex" : "inline-flex"} items-center gap-2 rounded-full px-4 py-2 text-sm transition-all active:scale-[0.97] ${
                     isActive
                       ? "bg-brand text-charcoal shadow-[0_8px_20px_-10px_rgba(106,206,234,0.7)]"
                       : "bg-cream text-charcoal hover:bg-cream/70"
@@ -109,7 +110,11 @@ export default function TopRides() {
 
         <div className="mt-10 grid grid-cols-1 md:grid-cols-3 gap-6">
           {rides.map((r, i) => (
-            <Reveal key={r.name} delay={i * 0.1}>
+            <Reveal
+              key={r.name}
+              delay={i * 0.1}
+              className={i > 0 ? "hidden md:block" : ""}
+            >
               <motion.article
                 whileHover={{ y: -6 }}
                 transition={{ type: "spring", stiffness: 220, damping: 22 }}

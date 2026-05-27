@@ -76,7 +76,7 @@ export default function CulturalBanner() {
   if (!moment || dismissed) return null;
 
   return (
-    <div className="bg-charcoal text-white text-sm">
+    <div className="bg-teal text-white text-sm">
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-10 py-2.5 flex items-center justify-center gap-3 text-center">
         <span aria-hidden="true">{moment.emoji}</span>
         <p className="leading-snug">

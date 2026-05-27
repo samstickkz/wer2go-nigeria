@@ -126,7 +126,7 @@ function StepConnectors() {
 
 export default function HowItWorks() {
   return (
-    <section id="how" className="bg-cream">
+    <section id="how" className="hidden md:block bg-cream">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10 py-14 sm:py-18 lg:py-20">
         <Reveal>
           <div className="text-center max-w-2xl mx-auto">

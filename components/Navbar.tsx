@@ -39,7 +39,7 @@ export default function Navbar() {
 
   return (
     <header
-      className={`sticky top-0 z-50 bg-teal/95 backdrop-blur-md text-white transition-all ${
+      className={`sticky top-0 z-50 bg-teal text-white transition-all ${
         scrolled ? "border-b border-white/10 shadow-[0_8px_24px_-16px_rgba(0,0,0,0.4)]" : ""
       }`}
     >
