@@ -177,7 +177,7 @@ export default function Footer() {
               <button
                 type="submit"
                 aria-label="Subscribe"
-                className="inline-flex items-center gap-1.5 rounded-full bg-brand px-4 py-2 text-sm font-medium text-white hover:bg-brand-dark transition-colors active:scale-[0.97]"
+                className="inline-flex items-center gap-1.5 rounded-full bg-charcoal px-4 py-2 text-sm font-medium text-white hover:bg-teal-soft transition-colors active:scale-[0.97]"
               >
                 <Send className="h-3.5 w-3.5" aria-hidden="true" />
                 Submit

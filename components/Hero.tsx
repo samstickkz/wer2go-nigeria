@@ -295,7 +295,7 @@ const slides: SlideData[] = [
     id: "qatar",
     watermark: "QATAR",
     ariaLabel: "Promo: win a sponsored flight to Doha every six months",
-    pillBg: "bg-brand text-white",
+    pillBg: "bg-brand text-charcoal",
     pillIcon: <Plane className="h-3.5 w-3.5" aria-hidden="true" />,
     pillLabel: "Promo · Every 6 months",
     title: (

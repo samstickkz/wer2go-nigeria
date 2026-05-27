@@ -47,7 +47,7 @@ function StepConnectors() {
         <motion.path
           d="M 19 7 C 28 0, 38 14, 47 7"
           fill="none"
-          stroke="#1A2826"
+          stroke="#0F1B2E"
           strokeOpacity="0.35"
           strokeWidth="1.5"
           strokeDasharray="5 7"
@@ -61,7 +61,7 @@ function StepConnectors() {
         <motion.path
           d="M 53 7 C 62 14, 72 0, 81 7"
           fill="none"
-          stroke="#1A2826"
+          stroke="#0F1B2E"
           strokeOpacity="0.35"
           strokeWidth="1.5"
           strokeDasharray="5 7"
@@ -81,7 +81,7 @@ function StepConnectors() {
             top: "50%",
             marginTop: "-6px",
             marginLeft: "-6px",
-            boxShadow: "0 0 0 5px rgba(242,104,60,0.22)",
+            boxShadow: "0 0 0 5px rgba(106,206,234,0.30)",
           }}
           initial={{ left: "19%", y: 0, opacity: 0 }}
           animate={{
@@ -103,7 +103,7 @@ function StepConnectors() {
             top: "50%",
             marginTop: "-6px",
             marginLeft: "-6px",
-            boxShadow: "0 0 0 5px rgba(242,104,60,0.22)",
+            boxShadow: "0 0 0 5px rgba(106,206,234,0.30)",
           }}
           initial={{ left: "53%", y: 0, opacity: 0 }}
           animate={{
@@ -156,7 +156,7 @@ export default function HowItWorks() {
                       transition={{ type: "spring", stiffness: 220, damping: 18 }}
                       className={`mx-auto inline-flex h-20 w-20 items-center justify-center rounded-2xl ${
                         s.accent
-                          ? "bg-brand text-white ring-4 ring-brand/15"
+                          ? "bg-brand text-charcoal ring-4 ring-brand/25"
                           : "bg-white text-charcoal ring-1 ring-charcoal/10"
                       }`}
                     >

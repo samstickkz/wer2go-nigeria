@@ -95,7 +95,7 @@ export default function TopRides() {
                   onClick={() => setActive(id)}
                   className={`inline-flex items-center gap-2 rounded-full px-4 py-2 text-sm transition-all active:scale-[0.97] ${
                     isActive
-                      ? "bg-brand text-white shadow-[0_8px_20px_-10px_rgba(242,104,60,0.7)]"
+                      ? "bg-brand text-charcoal shadow-[0_8px_20px_-10px_rgba(106,206,234,0.7)]"
                       : "bg-cream text-charcoal hover:bg-cream/70"
                   }`}
                 >

@@ -25,7 +25,7 @@ export default function ReferralCallout() {
     <section className="bg-cream">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10 py-10 sm:py-12">
         <Reveal>
-          <div className="relative overflow-hidden rounded-3xl bg-brand text-white p-8 sm:p-10 lg:p-12">
+          <div className="relative overflow-hidden rounded-3xl bg-charcoal text-white p-8 sm:p-10 lg:p-12">
             <span
               aria-hidden="true"
               className="pointer-events-none select-none absolute -bottom-10 -right-4 font-display font-extrabold text-white/[0.10] text-[160px] sm:text-[220px] lg:text-[260px] leading-none tracking-tighter"
@@ -92,7 +92,7 @@ export default function ReferralCallout() {
                       className={`inline-flex h-12 w-12 items-center justify-center rounded-xl transition-colors ${
                         copied
                           ? "bg-nigeriaGreen text-white"
-                          : "bg-charcoal text-white hover:bg-teal-deep"
+                          : "bg-brand text-charcoal hover:bg-brand-dark"
                       }`}
                       style={
                         copied
@@ -109,7 +109,7 @@ export default function ReferralCallout() {
                   </div>
                   <a
                     href="#download"
-                    className="mt-3 inline-flex w-full items-center justify-center gap-2 rounded-xl bg-charcoal px-4 py-3 text-sm font-semibold text-white hover:bg-teal-deep transition-colors active:scale-[0.98]"
+                    className="mt-3 inline-flex w-full items-center justify-center gap-2 rounded-xl bg-brand px-4 py-3 text-sm font-semibold text-charcoal hover:bg-brand-dark transition-colors active:scale-[0.98]"
                   >
                     Get your real code in the app
                     <ArrowRight className="h-4 w-4" aria-hidden="true" />

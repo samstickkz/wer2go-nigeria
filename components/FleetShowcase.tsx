@@ -35,7 +35,7 @@ export default function FleetShowcase() {
             className="mt-8 font-display font-extrabold text-center leading-[0.85] tracking-tighter select-none"
             style={{
               backgroundImage:
-                "linear-gradient(110deg, #1E4845 0%, #26615C 35%, #F2683C 70%, #1E4845 100%)",
+                "linear-gradient(110deg, #0F2238 0%, #1A3454 35%, #6ACEEA 70%, #0F2238 100%)",
               WebkitBackgroundClip: "text",
               backgroundClip: "text",
               color: "transparent",

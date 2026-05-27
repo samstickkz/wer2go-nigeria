@@ -55,7 +55,7 @@ export default function DriveWithUs() {
   const isMobile = platform === "ios" || platform === "android";
 
   return (
-    <section id="drive" className="relative overflow-hidden bg-brand text-white">
+    <section id="drive" className="relative overflow-hidden bg-charcoal text-white">
       <span
         aria-hidden="true"
         className="pointer-events-none select-none absolute -bottom-12 -left-4 font-display font-extrabold text-white/[0.08] text-[200px] sm:text-[300px] lg:text-[360px] leading-none tracking-tighter"
@@ -66,7 +66,7 @@ export default function DriveWithUs() {
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-10 py-14 sm:py-18 lg:py-20">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
           <Reveal className="lg:col-span-7">
-            <p className="text-xs uppercase tracking-wider text-charcoal/80 font-semibold">
+            <p className="text-xs uppercase tracking-wider text-brand font-semibold">
               Drive with wer2 GO
             </p>
             <h2 className="mt-3 font-display font-bold text-3xl sm:text-4xl lg:text-5xl leading-[1.04]">
@@ -102,7 +102,7 @@ export default function DriveWithUs() {
                 href={DRIVER_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 rounded-full bg-charcoal px-6 py-3 text-sm font-semibold text-white hover:bg-teal-deep transition-colors"
+                className="inline-flex items-center gap-2 rounded-full bg-brand px-6 py-3 text-sm font-semibold text-charcoal hover:bg-brand-dark transition-colors"
               >
                 Become a driver
                 <ArrowRight className="h-4 w-4" aria-hidden="true" />

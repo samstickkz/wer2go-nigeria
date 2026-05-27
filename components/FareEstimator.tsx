@@ -155,7 +155,7 @@ export default function FareEstimator() {
                         onClick={() => setRouteId(r.id)}
                         className={`w-full text-left rounded-2xl p-4 transition-all flex items-start gap-3 ${
                           isActive
-                            ? "bg-white ring-2 ring-brand shadow-[0_8px_24px_-12px_rgba(242,104,60,0.45)]"
+                            ? "bg-white ring-2 ring-brand shadow-[0_8px_24px_-12px_rgba(106,206,234,0.55)]"
                             : "bg-white/60 hover:bg-white ring-1 ring-charcoal/[0.06]"
                         }`}
                         aria-pressed={isActive}
@@ -163,7 +163,7 @@ export default function FareEstimator() {
                         <span
                           className={`flex-none mt-0.5 inline-flex h-8 w-8 items-center justify-center rounded-lg ${
                             isActive
-                              ? "bg-brand text-white"
+                              ? "bg-brand text-charcoal"
                               : "bg-cream text-charcoal/60"
                           }`}
                         >
@@ -267,7 +267,7 @@ export default function FareEstimator() {
                 </p>
                 <a
                   href="#download"
-                  className="inline-flex items-center justify-center gap-2 rounded-full bg-brand px-5 py-2.5 text-sm font-semibold text-white hover:bg-brand-dark transition-colors active:scale-[0.98]"
+                  className="inline-flex items-center justify-center gap-2 rounded-full bg-brand px-5 py-2.5 text-sm font-semibold text-charcoal hover:bg-brand-dark transition-colors active:scale-[0.98]"
                 >
                   <Smartphone className="h-4 w-4" aria-hidden="true" />
                   Book in the app

@@ -9,18 +9,24 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
+        // wer2 GO cyan accent — pulled from the live brand mark
         brand: {
-          DEFAULT: "#F2683C",
-          dark: "#D9542C",
+          DEFAULT: "#6ACEEA",
+          dark: "#2BB6E1",
+          soft: "#B8E4F1",
         },
+        // Dark navy surfaces — primary dark in the mobile app
         teal: {
-          DEFAULT: "#1E4845",
-          deep: "#0F2C2A",
-          soft: "#26615C",
+          DEFAULT: "#0F2238",
+          deep: "#06101F",
+          soft: "#1A3454",
         },
-        cream: "#F5EFE2",
-        charcoal: "#1A2826",
-        highlight: "#F5C518",
+        // Cool tinted off-white — soft section backgrounds
+        cream: "#F0F8FB",
+        // Body + headline text colour (dark navy tint)
+        charcoal: "#0F1B2E",
+        // Brand yellow for badges and stars
+        highlight: "#FFF421",
       },
       fontFamily: {
         display: ["var(--font-display)", "system-ui", "sans-serif"],

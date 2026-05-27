@@ -207,7 +207,7 @@ export default function EarningsCalculator() {
                     href={DRIVER_URL}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center justify-center gap-2 rounded-full bg-brand px-5 py-2.5 text-sm font-semibold text-white hover:bg-brand-dark transition-colors active:scale-[0.98]"
+                    className="inline-flex items-center justify-center gap-2 rounded-full bg-brand px-5 py-2.5 text-sm font-semibold text-charcoal hover:bg-brand-dark transition-colors active:scale-[0.98]"
                   >
                     Apply to drive
                     <ArrowRight className="h-4 w-4" aria-hidden="true" />
