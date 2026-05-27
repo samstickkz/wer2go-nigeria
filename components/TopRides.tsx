@@ -113,7 +113,7 @@ export default function TopRides() {
               <motion.article
                 whileHover={{ y: -6 }}
                 transition={{ type: "spring", stiffness: 220, damping: 22 }}
-                className="group relative rounded-3xl bg-cream overflow-hidden flex flex-col h-full"
+                className="group relative rounded-3xl bg-cream overflow-hidden flex flex-col h-full shadow-lift hover:shadow-liftHover transition-shadow"
               >
                 <span className="absolute top-5 left-5 z-10 inline-flex rounded-full bg-white px-3 py-1 text-[11px] font-semibold text-charcoal ring-1 ring-charcoal/5">
                   {r.badge}

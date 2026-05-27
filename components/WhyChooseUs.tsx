@@ -28,7 +28,7 @@ const features: Feature[] = [
 
 export default function WhyChooseUs() {
   return (
-    <section id="why" className="bg-cream">
+    <section id="why" className="bg-brand-soft">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10 py-14 sm:py-16">
         <Reveal>
           <div className="text-center max-w-2xl mx-auto">

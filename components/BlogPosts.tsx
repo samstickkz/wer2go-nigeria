@@ -61,7 +61,7 @@ export default function BlogPosts() {
         <div className="mt-10 grid grid-cols-1 md:grid-cols-3 gap-6">
           {posts.map((p, i) => (
             <Reveal key={p.title} delay={i * 0.08}>
-              <article className="group rounded-3xl overflow-hidden bg-cream flex flex-col h-full">
+              <article className="group rounded-3xl overflow-hidden bg-cream flex flex-col h-full shadow-lift hover:shadow-liftHover transition-shadow">
                 <div className="relative aspect-[5/3] w-full overflow-hidden bg-teal-deep">
                   <Image
                     src={p.image}

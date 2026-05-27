@@ -25,7 +25,11 @@ export default function ReferralCallout() {
     <section className="bg-cream">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10 py-10 sm:py-12">
         <Reveal>
-          <div className="relative overflow-hidden rounded-3xl bg-charcoal text-white p-8 sm:p-10 lg:p-12">
+          <div className="relative overflow-hidden rounded-3xl bg-charcoal text-white p-8 sm:p-10 lg:p-12 shadow-lift">
+            <div
+              aria-hidden="true"
+              className="absolute top-0 left-0 right-0 h-1.5 bg-highlight"
+            />
             <span
               aria-hidden="true"
               className="pointer-events-none select-none absolute -bottom-10 -right-4 font-display font-extrabold text-white/[0.10] text-[160px] sm:text-[220px] lg:text-[260px] leading-none tracking-tighter"

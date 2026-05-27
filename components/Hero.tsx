@@ -97,7 +97,7 @@ function MainSlideVisual() {
     <div className="relative h-[320px] sm:h-[420px] lg:h-[520px]">
       <div
         aria-hidden="true"
-        className="absolute right-0 top-6 bottom-6 w-[88%] rounded-l-[40px] bg-teal"
+        className="absolute right-0 top-6 bottom-6 w-[88%] rounded-l-[40px] bg-gradient-to-br from-brand via-teal-soft to-teal shadow-glow"
       />
       <motion.div
         className="absolute inset-0"
@@ -140,11 +140,11 @@ function MainSlideVisual() {
 
 function CountdownUnit({ value, label }: { value: number; label: string }) {
   return (
-    <span className="inline-flex flex-col items-center px-1">
-      <span className="font-display font-bold text-charcoal text-lg tabular-nums leading-none">
+    <span className="inline-flex flex-col items-center px-1.5">
+      <span className="font-display font-extrabold text-charcoal text-2xl tabular-nums leading-none">
         {String(value).padStart(2, "0")}
       </span>
-      <span className="mt-0.5 text-[8px] uppercase tracking-wider text-charcoal/55 font-semibold">
+      <span className="mt-1 text-[9px] uppercase tracking-wider text-charcoal/55 font-semibold">
         {label}
       </span>
     </span>

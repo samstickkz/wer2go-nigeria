@@ -31,9 +31,18 @@ const testimonials: Testimonial[] = [
 ];
 
 function Avatar({ name }: { name: string }) {
+  // Deterministic accent per name so the row doesn't look monotonous,
+  // but every avatar stays on-brand (navy / dark-navy / cyan).
+  const palettes = [
+    { bg: "0F2238", fg: "6ACEEA" }, // navy + cyan
+    { bg: "06101F", fg: "6ACEEA" }, // navy-deep + cyan
+    { bg: "6ACEEA", fg: "0F1B2E" }, // cyan + navy
+  ];
+  const hash = Array.from(name).reduce((a, c) => a + c.charCodeAt(0), 0);
+  const { bg, fg } = palettes[hash % palettes.length];
   const url = `https://ui-avatars.com/api/?name=${encodeURIComponent(
     name,
-  )}&background=F2683C&color=fff&size=160&font-size=0.42&bold=true`;
+  )}&background=${bg}&color=${fg}&size=160&font-size=0.42&bold=true`;
   return (
     <Image
       src={url}
@@ -48,17 +57,17 @@ function Avatar({ name }: { name: string }) {
 
 export default function Testimonials() {
   return (
-    <section className="bg-white">
+    <section className="bg-teal text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10 py-14 sm:py-18 lg:py-20">
         <Reveal>
           <div className="text-center max-w-2xl mx-auto">
             <p className="text-xs uppercase tracking-wider text-brand font-semibold">
               From the road
             </p>
-            <h2 className="mt-3 font-display font-bold text-charcoal text-3xl sm:text-4xl lg:text-5xl">
+            <h2 className="mt-3 font-display font-bold text-white text-3xl sm:text-4xl lg:text-5xl">
               What riders and drivers say.
             </h2>
-            <p className="mt-4 text-sm sm:text-base text-charcoal/65 leading-relaxed">
+            <p className="mt-4 text-sm sm:text-base text-white/65 leading-relaxed">
               Real stories from every corner of Nigeria — Lagos to Abuja, Port
               Harcourt to Kano.
             </p>
@@ -68,7 +77,7 @@ export default function Testimonials() {
         <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6">
           {testimonials.map((t, i) => (
             <Reveal key={t.name} delay={i * 0.1}>
-              <article className="rounded-3xl bg-cream p-6 sm:p-7 flex flex-col h-full">
+              <article className="rounded-3xl bg-white p-6 sm:p-7 flex flex-col h-full shadow-lift">
                 <div className="flex items-start justify-between gap-4">
                   <div className="flex items-center gap-3">
                     <Avatar name={t.name} />
