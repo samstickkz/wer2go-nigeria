@@ -94,7 +94,7 @@ export default function Testimonials() {
                             key={idx}
                             className={`h-3.5 w-3.5 ${
                               idx < t.rating
-                                ? "text-highlight fill-highlight"
+                                ? "text-amber-400 fill-amber-400"
                                 : "text-charcoal/20"
                             }`}
                             aria-hidden="true"

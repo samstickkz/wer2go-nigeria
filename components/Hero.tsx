@@ -273,7 +273,7 @@ const slides: SlideData[] = [
             {Array.from({ length: 5 }).map((_, i) => (
               <Star
                 key={i}
-                className="h-4 w-4 text-highlight fill-highlight"
+                className="h-4 w-4 text-amber-400 fill-amber-400"
                 aria-hidden="true"
               />
             ))}
