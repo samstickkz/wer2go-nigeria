@@ -86,13 +86,15 @@ export default function Footer() {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-10 py-14 sm:py-16">
           <Reveal className="lg:col-span-4">
-            <Image
-              src="/brand/wer2-go-logo.svg"
-              alt="wer2 GO"
-              width={150}
-              height={48}
-              className="h-12 w-auto"
-            />
+            <span className="inline-flex h-12 w-12 items-center justify-center overflow-hidden rounded-xl ring-1 ring-charcoal/10">
+              <Image
+                src="/brand/wer2-mark.webp"
+                alt="wer2 GO"
+                width={96}
+                height={96}
+                className="h-12 w-12 object-cover"
+              />
+            </span>
             <p className="mt-5 text-sm text-charcoal/65 leading-relaxed max-w-xs">
               wer2 GO is the ride-hailing app born in Doha and built for
               Nigeria. NIN-verified drivers, locked fares and an in-app SOS on
