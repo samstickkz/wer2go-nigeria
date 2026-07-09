@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import { Inter, Bricolage_Grotesque } from "next/font/google";
 import "./globals.css";
 
@@ -32,6 +33,13 @@ export default function RootLayout({
         className={`${interBody.variable} ${display.variable} font-sans bg-white text-charcoal antialiased`}
       >
         {children}
+        {/* Replio AI support widget — "wer2 GO" tenant. Replies 24/7 in the
+            visitor's own language (English, Pidgin, Yoruba, Igbo, Hausa). */}
+        <Script
+          src="https://replio.live/widget.js"
+          data-replio="j5Kgypem3NXbRZJc"
+          strategy="afterInteractive"
+        />
       </body>
     </html>
   );
