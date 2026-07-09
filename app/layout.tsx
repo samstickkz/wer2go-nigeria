@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import Script from "next/script";
+// import Script from "next/script"; // re-enable with the Replio widget below
 import { Inter, Bricolage_Grotesque } from "next/font/google";
 import "./globals.css";
 
@@ -33,13 +33,18 @@ export default function RootLayout({
         className={`${interBody.variable} ${display.variable} font-sans bg-white text-charcoal antialiased`}
       >
         {children}
-        {/* Replio AI support widget — "wer2 GO" tenant. Replies 24/7 in the
-            visitor's own language (English, Pidgin, Yoruba, Igbo, Hausa). */}
+        {/* ── Replio AI support widget (BACKUP — temporarily disabled) ──────────
+            "wer2 GO" tenant. Replies 24/7 in the visitor's own language
+            (English, Pidgin, Yoruba, Igbo, Hausa). Currently OFF pending
+            approval; WhatsApp (WhatsAppFab) is the live channel meanwhile.
+            To re-enable: uncomment the Script import above + the <Script> below,
+            and remove <WhatsAppFab/> from app/page.tsx.
         <Script
           src="https://replio.live/widget.js"
           data-replio="j5Kgypem3NXbRZJc"
           strategy="afterInteractive"
         />
+        ──────────────────────────────────────────────────────────────────── */}
       </body>
     </html>
   );

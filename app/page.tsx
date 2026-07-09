@@ -14,6 +14,7 @@ import EarningsCalculator from "@/components/EarningsCalculator";
 import FleetShowcase from "@/components/FleetShowcase";
 import BlogPosts from "@/components/BlogPosts";
 import Footer from "@/components/Footer";
+import WhatsAppFab from "@/components/WhatsAppFab";
 
 export default function Home() {
   return (
@@ -36,6 +37,7 @@ export default function Home() {
         <BlogPosts />
       </main>
       <Footer />
+      <WhatsAppFab />
     </>
   );
 }
