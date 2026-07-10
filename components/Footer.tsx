@@ -41,6 +41,11 @@ const infoLinks = [
 
 const socials = [
   {
+    Icon: Send,
+    label: "Telegram · wer2 GO Nigeria",
+    href: "https://t.me/wer2go_nigeria",
+  },
+  {
     Icon: Instagram,
     label: "Instagram · @wer2ride",
     href: "https://www.instagram.com/wer2ride/",
