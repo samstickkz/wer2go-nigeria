@@ -38,6 +38,7 @@ export default function RootLayout({
         <Script
           src="https://replio.live/widget.js"
           data-replio="j5Kgypem3NXbRZJc"
+          data-country="NG"
           strategy="afterInteractive"
         />
       </body>
