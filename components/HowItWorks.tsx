@@ -20,7 +20,7 @@ const steps: Step[] = [
   {
     Icon: Clock4,
     title: "See the locked fare",
-    body: "Same price at 8 AM or 11 PM. No peak-hour surge, no haggling, no guesswork.",
+    body: "Fair pricing.",
     accent: true,
   },
   {

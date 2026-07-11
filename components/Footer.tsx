@@ -14,15 +14,6 @@ import {
 } from "lucide-react";
 import { Reveal } from "./Reveal";
 
-const payments = [
-  "Paystack",
-  "Flutterwave",
-  "Verve",
-  "Mastercard",
-  "Visa",
-  "Bank Transfer",
-];
-
 const infoLinks = [
   { label: "Download the app", href: "#download", external: false },
   {
@@ -71,24 +62,6 @@ export default function Footer() {
   return (
     <footer id="contact" className="bg-cream">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10">
-        <Reveal>
-          <div className="border-y border-charcoal/10 py-6">
-            <p className="text-center text-[11px] uppercase tracking-wider text-charcoal/45 font-semibold">
-              Pay your way · Accepted in the wer2 GO app
-            </p>
-            <div className="mt-4 flex flex-wrap items-center justify-center gap-x-10 gap-y-3">
-              {payments.map((p) => (
-                <span
-                  key={p}
-                  className="font-display font-semibold text-base text-charcoal/40 hover:text-charcoal/70 transition-colors"
-                >
-                  {p}
-                </span>
-              ))}
-            </div>
-          </div>
-        </Reveal>
-
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-10 py-14 sm:py-16">
           <Reveal className="lg:col-span-4">
             <span className="inline-flex h-12 w-12 items-center justify-center overflow-hidden rounded-xl ring-1 ring-charcoal/10">
@@ -165,33 +138,10 @@ export default function Footer() {
 
           <Reveal className="lg:col-span-3" delay={0.15}>
             <h3 className="font-display font-semibold text-charcoal">
-              Subscribe to our newsletter
+              Follow us
             </h3>
-            <p className="mt-3 text-sm text-charcoal/65">
-              Driver economics, new city launches, and the occasional Hausa
-              lesson — once a month.
-            </p>
-            <form
-              onSubmit={(e) => e.preventDefault()}
-              className="mt-4 flex items-center gap-2 rounded-full bg-white p-1.5 ring-1 ring-charcoal/10"
-            >
-              <input
-                type="email"
-                placeholder="Email address"
-                className="flex-1 bg-transparent px-4 py-2 text-sm text-charcoal placeholder:text-charcoal/45 focus:outline-none"
-                aria-label="Email address"
-              />
-              <button
-                type="submit"
-                aria-label="Subscribe"
-                className="inline-flex items-center gap-1.5 rounded-full bg-charcoal px-4 py-2 text-sm font-medium text-white hover:bg-teal-soft transition-colors active:scale-[0.97]"
-              >
-                <Send className="h-3.5 w-3.5" aria-hidden="true" />
-                Submit
-              </button>
-            </form>
 
-            <ul className="mt-6 flex items-center gap-3">
+            <ul className="mt-5 flex items-center gap-3">
               {socials.map(({ Icon, label, href }) => (
                 <li key={label}>
                   <a
