@@ -8,7 +8,6 @@ import {
   CalendarCheck,
   ShieldCheck,
   ArrowRight,
-  ExternalLink,
   QrCode,
   Smartphone,
   LucideIcon,
@@ -73,9 +72,9 @@ export default function DriveWithUs() {
               Drive your own hours. Keep more of every fare.
             </h2>
             <p className="mt-4 max-w-xl text-base sm:text-lg text-white/85 leading-relaxed">
-              10% commission, weekly payouts and a fleet dashboard for owners.
-              Whether you drive a Corolla in Surulere or run six Siennas in
-              Wuse — wer2 GO is built for you.
+              10% commission and weekly payouts, with earnings you can track
+              from day one. Whether you drive in Surulere, Wuse or Sabon Gari —
+              wer2 GO is built for you.
             </p>
 
             <ul className="mt-8 grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4">
@@ -107,15 +106,6 @@ export default function DriveWithUs() {
                 Become a driver
                 <ArrowRight className="h-4 w-4" aria-hidden="true" />
               </motion.a>
-              <a
-                href={`${DRIVER_URL}#fleet`}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 rounded-full bg-white/15 border border-white/30 px-6 py-3 text-sm font-medium text-white hover:bg-white/25 transition-colors"
-              >
-                Fleet partners
-                <ExternalLink className="h-4 w-4" aria-hidden="true" />
-              </a>
             </div>
 
             <p className="mt-5 text-xs text-white/70 flex items-center gap-2">

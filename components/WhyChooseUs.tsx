@@ -21,8 +21,8 @@ const features: Feature[] = [
   },
   {
     Icon: BadgeCheck,
-    title: "Locked fares",
-    body: "The price you see at booking is the price you pay — no surge, no surprises.",
+    title: "Upfront fare estimates",
+    body: "See an estimated fare before you book, so you know what to expect — no surprises at the end of the trip.",
   },
 ];
 

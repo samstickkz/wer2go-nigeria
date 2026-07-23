@@ -7,27 +7,20 @@ import {
   Users,
   MessageCircle,
   Mail,
-  MapPin,
-  Phone,
   ChevronRight,
   Send,
 } from "lucide-react";
 import { Reveal } from "./Reveal";
 
 const infoLinks = [
-  { label: "Download the app", href: "#download", external: false },
+  { label: "Download the app", href: "https://apps.wer2.com/", external: true },
   {
     label: "Become a driver",
     href: "https://driver.gower2.com",
     external: true,
   },
-  {
-    label: "Fleet partners",
-    href: "https://driver.gower2.com#fleet",
-    external: true,
-  },
   { label: "Press & news", href: "#press", external: false },
-  { label: "Privacy policy", href: "#privacy", external: false },
+  { label: "Privacy policy", href: "/privacy-policy", external: false },
 ];
 
 const socials = [
@@ -75,8 +68,8 @@ export default function Footer() {
             </span>
             <p className="mt-5 text-sm text-charcoal/65 leading-relaxed max-w-xs">
               wer2 GO is the ride-hailing app born in Doha and built for
-              Nigeria. NIN-verified drivers, locked fares and an in-app SOS on
-              every trip — across every state.
+              Nigeria. NIN-verified drivers, upfront fare estimates and an
+              in-app SOS on every trip — across every state.
             </p>
             <div className="mt-5 inline-flex items-center gap-2 rounded-full bg-white px-3 py-1.5 text-xs font-medium text-charcoal ring-1 ring-charcoal/10">
               🇳🇬 Proudly serving Naija
@@ -89,25 +82,12 @@ export default function Footer() {
             </h3>
             <ul className="mt-5 space-y-4 text-sm text-charcoal/70">
               <li className="flex items-start gap-3">
-                <MapPin className="h-4 w-4 mt-0.5 text-brand" aria-hidden="true" />
-                <span>
-                  Plot 1107, Adetokunbo Ademola Crescent,
-                  <br />
-                  Wuse II, Abuja
-                </span>
-              </li>
-              <li className="flex items-start gap-3">
-                <Phone className="h-4 w-4 mt-0.5 text-brand" aria-hidden="true" />
-                <span>
-                  +234 700 000 0000
-                  <br />
-                  +974 4000 0000
-                </span>
-              </li>
-              <li className="flex items-start gap-3">
                 <Mail className="h-4 w-4 mt-0.5 text-brand" aria-hidden="true" />
-                <a href="mailto:hello@wer2go.ng" className="hover:text-brand">
-                  hello@wer2go.ng
+                <a
+                  href="mailto:contact@gower2.com"
+                  className="inline-block py-2 hover:text-brand"
+                >
+                  contact@gower2.com
                 </a>
               </li>
             </ul>
@@ -117,7 +97,7 @@ export default function Footer() {
             <h3 className="font-display font-semibold text-charcoal">
               Information
             </h3>
-            <ul className="mt-5 space-y-3 text-sm">
+            <ul className="mt-4 space-y-0.5 text-sm">
               {infoLinks.map((l) => (
                 <li key={l.label}>
                   <a
@@ -126,7 +106,7 @@ export default function Footer() {
                       target: "_blank",
                       rel: "noopener noreferrer",
                     })}
-                    className="inline-flex items-center gap-1 text-charcoal/70 hover:text-brand transition-colors"
+                    className="inline-flex items-center gap-1 py-2.5 text-charcoal/70 hover:text-brand transition-colors"
                   >
                     <ChevronRight className="h-3.5 w-3.5 text-brand" aria-hidden="true" />
                     {l.label}
@@ -150,7 +130,7 @@ export default function Footer() {
                     rel="noopener noreferrer"
                     aria-label={label}
                     title={label}
-                    className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-charcoal/20 text-charcoal hover:bg-brand hover:text-white hover:border-brand transition-colors"
+                    className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-charcoal/20 text-charcoal hover:bg-brand hover:text-white hover:border-brand transition-colors"
                   >
                     <Icon className="h-4 w-4" aria-hidden="true" />
                   </a>
@@ -169,7 +149,7 @@ export default function Footer() {
               <li key={l} className="flex items-center gap-3">
                 <button
                   type="button"
-                  className="hover:text-charcoal transition-colors"
+                  className="px-2 py-2.5 hover:text-charcoal transition-colors"
                   aria-label={`Switch language to ${l}`}
                 >
                   {l}

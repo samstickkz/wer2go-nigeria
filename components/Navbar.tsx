@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import { ChevronDown, Smartphone, ExternalLink } from "lucide-react";
+import { ChevronDown, Smartphone, ExternalLink, Menu, X } from "lucide-react";
 
 const links = [
   { href: "#home", label: "Home", external: false },
@@ -29,6 +29,7 @@ export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [lang, setLang] = useState<(typeof languages)[number]["code"]>("EN");
   const [langOpen, setLangOpen] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 4);
@@ -36,6 +37,14 @@ export default function Navbar() {
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
+
+  // Don't let the page scroll behind the open mobile menu.
+  useEffect(() => {
+    document.body.style.overflow = menuOpen ? "hidden" : "";
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [menuOpen]);
 
   return (
     <header
@@ -136,15 +145,87 @@ export default function Navbar() {
           </div>
 
           <a
-            href="#download"
+            href="https://apps.wer2.com/"
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-flex items-center gap-2 rounded-full bg-brand px-4 sm:px-5 py-2.5 text-sm font-semibold text-charcoal hover:bg-brand-dark transition-colors active:scale-[0.98]"
           >
             <Smartphone className="h-4 w-4" aria-hidden="true" />
             <span className="hidden sm:inline">Download app</span>
             <span className="sm:hidden">App</span>
           </a>
+
+          {/* Mobile/tablet menu toggle — the link list is lg-only. */}
+          <button
+            type="button"
+            onClick={() => setMenuOpen((v) => !v)}
+            aria-expanded={menuOpen}
+            aria-controls="mobile-menu"
+            aria-label={menuOpen ? "Close menu" : "Open menu"}
+            className="lg:hidden inline-flex h-11 w-11 items-center justify-center rounded-full text-white/90 hover:bg-white/10 transition-colors"
+          >
+            {menuOpen ? (
+              <X className="h-6 w-6" aria-hidden="true" />
+            ) : (
+              <Menu className="h-6 w-6" aria-hidden="true" />
+            )}
+          </button>
         </div>
       </nav>
+
+      {menuOpen && (
+        <div
+          id="mobile-menu"
+          className="lg:hidden border-t border-white/10 bg-teal max-h-[calc(100dvh-5rem)] overflow-y-auto"
+        >
+          <ul className="px-4 sm:px-6 py-2">
+            {links.map((l) => (
+              <li key={l.href}>
+                <a
+                  href={l.href}
+                  onClick={() => setMenuOpen(false)}
+                  {...(l.external && {
+                    target: "_blank",
+                    rel: "noopener noreferrer",
+                  })}
+                  className="flex items-center gap-2 py-4 text-base font-medium text-white/90 hover:text-brand border-b border-white/10 last:border-b-0 transition-colors"
+                >
+                  {l.label}
+                  {l.external && (
+                    <ExternalLink
+                      className="h-3.5 w-3.5 text-white/45"
+                      aria-hidden="true"
+                    />
+                  )}
+                </a>
+              </li>
+            ))}
+          </ul>
+
+          <div className="px-4 sm:px-6 pb-5 pt-1">
+            <p className="text-[11px] uppercase tracking-wider text-white/45 mb-2">
+              Language
+            </p>
+            <div className="flex flex-wrap gap-2">
+              {languages.map((l) => (
+                <button
+                  key={l.code}
+                  type="button"
+                  onClick={() => setLang(l.code)}
+                  aria-pressed={lang === l.code}
+                  className={`rounded-full px-5 py-3 text-xs font-semibold uppercase tracking-wider transition-colors ${
+                    lang === l.code
+                      ? "bg-brand text-charcoal"
+                      : "bg-white/10 text-white/80 hover:bg-white/20"
+                  }`}
+                >
+                  {l.code}
+                </button>
+              ))}
+            </div>
+          </div>
+        </div>
+      )}
     </header>
   );
 }

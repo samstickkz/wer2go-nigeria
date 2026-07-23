@@ -18,13 +18,13 @@ const testimonials: Testimonial[] = [
     name: "Chiamaka N.",
     role: "Daily commuter · Lekki, Lagos",
     rating: 5,
-    body: "Locked fare from Ikate to Victoria Island, even at 7 PM go-slow. I'm never going back to surge pricing.",
+    body: "Clear fare estimate from Ikate to Victoria Island, even at 7 PM go-slow. I'm never going back to surge pricing.",
   },
   {
     name: "Tunde O.",
-    role: "Fleet partner · Trans-Amadi, Port Harcourt",
+    role: "Driver · Trans-Amadi, Port Harcourt",
     rating: 5,
-    body: "Moved two cars over from a competitor last quarter. Weekly payouts hit on time and dispatch keeps drivers busy across GRA and Mile 1.",
+    body: "Switched over from a competitor last quarter. Weekly payouts hit on time and requests keep coming across GRA and Mile 1.",
   },
   {
     name: "Aisha B.",

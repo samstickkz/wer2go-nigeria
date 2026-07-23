@@ -19,7 +19,7 @@ const moments: Moment[] = [
     emoji: "🌙",
     greeting: "Eid Mubarak",
     message: "₦500 off every ride this Eid weekend with code EID500.",
-    cta: { label: "Open the app", href: "#download" },
+    cta: { label: "Open the app", href: "https://apps.wer2.com/" },
   },
   {
     from: "2026-05-25",
@@ -28,7 +28,7 @@ const moments: Moment[] = [
     greeting: "Sallah Mubarak",
     message:
       "₦500 off every ride this Sallah weekend in Kano, Abuja and Lagos with code SALLAH.",
-    cta: { label: "Open the app", href: "#download" },
+    cta: { label: "Open the app", href: "https://apps.wer2.com/" },
   },
   {
     from: "2026-05-27",
@@ -52,7 +52,7 @@ const moments: Moment[] = [
     emoji: "🎄",
     greeting: "Merry Christmas from wer2 GO",
     message:
-      "Door-to-door festive rides — same locked fare, no Christmas Day surge.",
+      "Door-to-door festive rides — upfront fare estimates, no Christmas Day surge.",
   },
 ];
 
@@ -87,6 +87,10 @@ export default function CulturalBanner() {
           {moment.cta && (
             <a
               href={moment.cta.href}
+              {...(moment.cta.href.startsWith("http") && {
+                target: "_blank",
+                rel: "noopener noreferrer",
+              })}
               className="ml-2 underline underline-offset-2 decoration-brand decoration-2 hover:text-brand transition-colors"
             >
               {moment.cta.label}

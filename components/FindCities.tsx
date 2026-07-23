@@ -2,6 +2,8 @@ import { Smartphone, QrCode } from "lucide-react";
 import { AppStoreBadge, GooglePlayBadge } from "./AppStoreBadges";
 import { Reveal } from "./Reveal";
 
+const APPS_URL = "https://apps.wer2.com/";
+
 export default function FindCities() {
   return (
     <section id="download" className="bg-teal-deep text-white">
@@ -22,8 +24,8 @@ export default function FindCities() {
               </p>
 
               <div className="mt-7 flex flex-wrap items-center gap-3">
-                <AppStoreBadge />
-                <GooglePlayBadge />
+                <AppStoreBadge href={APPS_URL} />
+                <GooglePlayBadge href={APPS_URL} />
               </div>
             </div>
 
@@ -42,14 +44,14 @@ export default function FindCities() {
                     Point your camera here.
                   </p>
                   <p className="mt-1 text-sm text-white/65 leading-relaxed">
-                    Auto-routes you to App Store or Google Play.
+                    Opens apps.wer2.com — routes you to the right store.
                   </p>
                 </div>
               </div>
 
               <p className="mt-4 text-xs text-white/55 flex items-center gap-2">
                 <Smartphone className="h-3.5 w-3.5" aria-hidden="true" />
-                Sample placeholder — final design follows your sample.
+                Available on iOS and Android.
               </p>
             </div>
           </div>

@@ -1,9 +1,15 @@
 type BadgeProps = { href?: string };
 
+const ext = (href: string) =>
+  href.startsWith("http")
+    ? { target: "_blank", rel: "noopener noreferrer" }
+    : {};
+
 export function AppStoreBadge({ href = "#ios" }: BadgeProps) {
   return (
     <a
       href={href}
+      {...ext(href)}
       aria-label="Download on the App Store"
       className="group inline-flex items-center gap-3 rounded-2xl bg-charcoal px-4 py-2.5 text-white hover:bg-teal-deep transition-colors active:scale-[0.98]"
     >
@@ -29,6 +35,7 @@ export function GooglePlayBadge({ href = "#android" }: BadgeProps) {
   return (
     <a
       href={href}
+      {...ext(href)}
       aria-label="Get it on Google Play"
       className="group inline-flex items-center gap-3 rounded-2xl bg-charcoal px-4 py-2.5 text-white hover:bg-teal-deep transition-colors active:scale-[0.98]"
     >

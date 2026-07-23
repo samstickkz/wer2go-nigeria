@@ -19,7 +19,7 @@ const steps: Step[] = [
   },
   {
     Icon: Clock4,
-    title: "See the locked fare",
+    title: "See your fare estimate",
     body: "Fair pricing.",
     accent: true,
   },

@@ -130,7 +130,7 @@ export default function FareEstimator() {
               Fare estimator
             </p>
             <h2 className="mt-3 font-display font-bold text-charcoal text-3xl sm:text-4xl lg:text-5xl">
-              See the locked fare. Before you ride.
+              See your fare estimate. Before you ride.
             </h2>
             <p className="mt-4 text-sm sm:text-base text-charcoal/65 leading-relaxed">
               Same fare at 8 AM or 11 PM, rain or shine. Pick a popular Naija

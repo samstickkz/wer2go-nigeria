@@ -90,7 +90,7 @@ function MainSlideVisual() {
 
       <div className="absolute -bottom-3 sm:bottom-4 left-2 sm:left-6 lg:-left-4 rounded-2xl bg-white px-4 py-3 ring-1 ring-charcoal/10">
         <p className="text-[10px] uppercase tracking-wider text-charcoal/55">
-          Fare locked
+          Estimated fare
         </p>
         <p className="mt-0.5 font-display font-semibold text-charcoal">
           ₦2,450{" "}
