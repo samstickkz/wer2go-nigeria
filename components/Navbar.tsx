@@ -8,7 +8,6 @@ import { ChevronDown, Smartphone, ExternalLink, Menu, X } from "lucide-react";
 const links = [
   { href: "#home", label: "Home", external: false },
   { href: "#how", label: "How it works", external: false },
-  { href: "#rides", label: "Rides", external: false },
   { href: "#why", label: "Why wer2 GO", external: false },
   {
     href: "https://driver.gower2.com",
