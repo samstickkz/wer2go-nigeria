@@ -86,7 +86,7 @@ export default function Footer() {
                 <Mail className="h-4 w-4 mt-0.5 text-brand" aria-hidden="true" />
                 <a
                   href="mailto:contact@gower2.com"
-                  className="inline-block py-2 hover:text-brand"
+                  className="inline-block py-2.5 hover:text-brand"
                 >
                   contact@gower2.com
                 </a>
@@ -107,7 +107,7 @@ export default function Footer() {
                       target: "_blank",
                       rel: "noopener noreferrer",
                     })}
-                    className="inline-flex items-center gap-1 py-2.5 text-charcoal/70 hover:text-brand transition-colors"
+                    className="inline-flex min-h-11 items-center gap-1 py-2.5 text-charcoal/70 hover:text-brand transition-colors"
                   >
                     <ChevronRight className="h-3.5 w-3.5 text-brand" aria-hidden="true" />
                     {l.label}
@@ -150,7 +150,7 @@ export default function Footer() {
               <li key={l} className="flex items-center gap-3">
                 <button
                   type="button"
-                  className="px-2 py-2.5 hover:text-charcoal transition-colors"
+                  className="inline-flex min-h-11 min-w-11 items-center justify-center px-2 hover:text-charcoal transition-colors"
                   aria-label={`Switch language to ${l}`}
                 >
                   {l}
