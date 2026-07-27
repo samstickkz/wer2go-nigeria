@@ -5,7 +5,6 @@ import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import {
   Wallet,
-  CalendarCheck,
   ShieldCheck,
   ArrowRight,
   QrCode,
@@ -14,7 +13,7 @@ import {
 } from "lucide-react";
 import { Reveal } from "./Reveal";
 
-const DRIVER_URL = "https://driver.gower2.com";
+import { DRIVER_URL } from "@/lib/site";
 
 type Perk = { Icon: LucideIcon; title: string; body: string };
 
@@ -24,11 +23,14 @@ const perks: Perk[] = [
     title: "10% commission",
     body: "Lowest in Nigeria. 90% stays in your account.",
   },
-  {
-    Icon: CalendarCheck,
-    title: "Weekly payouts",
-    body: "Settled every Tuesday — no chasing, no delays.",
-  },
+  // HIDDEN 2026-07-27: payouts are made on request, not on a weekly Tuesday
+  // cycle, so this promised something operations doesn't do. Restore (or
+  // reword to the real cadence) once scheduled payouts actually run.
+  // {
+  //   Icon: CalendarCheck,
+  //   title: "Weekly payouts",
+  //   body: "Settled every Tuesday — no chasing, no delays.",
+  // },
   {
     Icon: ShieldCheck,
     title: "NIN + BVN onboarding",
@@ -72,12 +74,16 @@ export default function DriveWithUs() {
               Drive your own hours. Keep more of every fare.
             </h2>
             <p className="mt-4 max-w-xl text-base sm:text-lg text-white/85 leading-relaxed">
-              10% commission and weekly payouts, with earnings you can track
-              from day one. Whether you drive in Surulere, Wuse or Sabon Gari —
-              wer2 GO is built for you.
+              10% commission, with earnings you can track from day one and
+              payouts whenever you request them. Whether you drive in Surulere,
+              Wuse or Sabon Gari — wer2 GO is built for you.
             </p>
 
-            <ul className="mt-8 grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4">
+            <ul
+              className={`mt-8 grid grid-cols-1 gap-3 sm:gap-4 ${
+                perks.length === 3 ? "sm:grid-cols-3" : "sm:grid-cols-2"
+              }`}
+            >
               {perks.map((p) => (
                 <li
                   key={p.title}
@@ -165,10 +171,10 @@ export default function DriveWithUs() {
                       </div>
                       <div className="text-right">
                         <p className="text-[10px] uppercase tracking-wider text-charcoal/55 font-semibold">
-                          Paid
+                          Paid out
                         </p>
                         <p className="mt-1 font-display font-semibold text-sm">
-                          Tue 9:14 AM
+                          On request
                         </p>
                       </div>
                     </div>

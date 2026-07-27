@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { X } from "lucide-react";
+import { APPS_URL } from "@/lib/site";
 
 type Moment = {
   from: string;
@@ -19,7 +20,7 @@ const moments: Moment[] = [
     emoji: "🌙",
     greeting: "Eid Mubarak",
     message: "₦500 off every ride this Eid weekend with code EID500.",
-    cta: { label: "Open the app", href: "https://apps.wer2.com/" },
+    cta: { label: "Open the app", href: APPS_URL },
   },
   {
     from: "2026-05-25",
@@ -28,7 +29,7 @@ const moments: Moment[] = [
     greeting: "Sallah Mubarak",
     message:
       "₦500 off every ride this Sallah weekend in Kano, Abuja and Lagos with code SALLAH.",
-    cta: { label: "Open the app", href: "https://apps.wer2.com/" },
+    cta: { label: "Open the app", href: APPS_URL },
   },
   {
     from: "2026-05-27",

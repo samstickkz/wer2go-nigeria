@@ -23,5 +23,9 @@ export const CITIES = [
   "Lagos",
 ] as const;
 
-export const APPS_URL = "https://apps.wer2.com/";
+/** Rider ("client") app — smart link that routes to the right store. */
+export const APPS_URL = "https://get.gower2.com";
+
+/** Driver app — separate download for people who drive with wer2 GO. */
+export const DRIVER_URL = "https://driver.gower2.com";
 export const CONTACT_EMAIL = "contact@gower2.com";

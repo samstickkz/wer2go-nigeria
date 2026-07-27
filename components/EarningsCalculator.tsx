@@ -11,7 +11,7 @@ import {
 } from "lucide-react";
 import { Reveal } from "./Reveal";
 
-const DRIVER_URL = "https://driver.gower2.com";
+import { DRIVER_URL } from "@/lib/site";
 const RIDES_PER_HOUR = 2;
 const COMMISSION_DRIVER_KEEPS = 0.9;
 

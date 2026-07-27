@@ -2,7 +2,7 @@ import { Smartphone, QrCode } from "lucide-react";
 import { AppStoreBadge, GooglePlayBadge } from "./AppStoreBadges";
 import { Reveal } from "./Reveal";
 
-const APPS_URL = "https://apps.wer2.com/";
+import { APPS_URL } from "@/lib/site";
 
 export default function FindCities() {
   return (
@@ -44,7 +44,7 @@ export default function FindCities() {
                     Point your camera here.
                   </p>
                   <p className="mt-1 text-sm text-white/65 leading-relaxed">
-                    Opens apps.wer2.com — routes you to the right store.
+                    Opens get.gower2.com — routes you to the right store.
                   </p>
                 </div>
               </div>

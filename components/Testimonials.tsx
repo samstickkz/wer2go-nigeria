@@ -24,7 +24,7 @@ const testimonials: Testimonial[] = [
     name: "Tunde O.",
     role: "Driver · Trans-Amadi, Port Harcourt",
     rating: 5,
-    body: "Switched over from a competitor last quarter. Weekly payouts hit on time and requests keep coming across GRA and Mile 1.",
+    body: "Switched over from a competitor last quarter. Cashing out is quick whenever I ask, and requests keep coming across GRA and Mile 1.",
   },
   {
     name: "Aisha B.",

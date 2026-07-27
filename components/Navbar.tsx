@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { ChevronDown, Smartphone, ExternalLink, Menu, X } from "lucide-react";
+import { APPS_URL } from "@/lib/site";
 
 const links = [
   { href: "#home", label: "Home", external: false },
@@ -144,7 +145,7 @@ export default function Navbar() {
           </div>
 
           <a
-            href="https://apps.wer2.com/"
+            href={APPS_URL}
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 rounded-full bg-brand px-4 sm:px-5 py-2.5 text-sm font-semibold text-charcoal hover:bg-brand-dark transition-colors active:scale-[0.98]"

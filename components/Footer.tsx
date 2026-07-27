@@ -11,9 +11,10 @@ import {
   Send,
 } from "lucide-react";
 import { Reveal } from "./Reveal";
+import { APPS_URL } from "@/lib/site";
 
 const infoLinks = [
-  { label: "Download the app", href: "https://apps.wer2.com/", external: true },
+  { label: "Download the app", href: APPS_URL, external: true },
   {
     label: "Become a driver",
     href: "https://driver.gower2.com",
