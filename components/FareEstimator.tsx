@@ -171,11 +171,11 @@ export default function FareEstimator() {
                         </span>
                         <span className="flex-1 min-w-0">
                           <span className="flex items-center gap-2">
-                            <span className="text-[10px] uppercase tracking-wider text-charcoal/55 font-semibold">
+                            <span className="text-[11px] sm:text-[10px] uppercase tracking-wider text-charcoal/55 font-semibold">
                               {r.city}
                             </span>
                             {r.popular && (
-                              <span className="rounded-full bg-highlight/70 px-1.5 py-0 text-[9px] uppercase tracking-wider font-semibold text-charcoal">
+                              <span className="rounded-full bg-highlight/70 px-1.5 py-0 text-[11px] uppercase tracking-wider font-semibold text-charcoal">
                                 Popular
                               </span>
                             )}
@@ -201,7 +201,7 @@ export default function FareEstimator() {
             <div className="rounded-3xl bg-charcoal text-white p-6 sm:p-8 lg:p-10 h-full">
               <div className="flex items-start justify-between gap-3">
                 <div>
-                  <p className="text-[10px] uppercase tracking-wider text-highlight font-semibold">
+                  <p className="text-[11px] sm:text-[10px] uppercase tracking-wider text-highlight font-semibold">
                     Estimated fare · {route.city}
                   </p>
                   <p className="mt-2 font-display font-semibold text-lg sm:text-xl text-white leading-snug">
@@ -243,7 +243,7 @@ export default function FareEstimator() {
                             </span>
                           </div>
                           {rt.badge && (
-                            <span className="rounded-full bg-brand/20 px-2 py-0.5 text-[9px] uppercase tracking-wider text-brand font-semibold">
+                            <span className="rounded-full bg-brand/20 px-2 py-0.5 text-[11px] uppercase tracking-wider text-brand font-semibold">
                               {rt.badge}
                             </span>
                           )}
@@ -251,7 +251,7 @@ export default function FareEstimator() {
                         <p className="mt-3 font-display font-bold text-white text-2xl">
                           {formatNaira(fare)}
                         </p>
-                        <p className="mt-1 text-[10px] uppercase tracking-wider text-white/45 font-semibold">
+                        <p className="mt-1 text-[11px] sm:text-[10px] uppercase tracking-wider text-white/45 font-semibold">
                           {rt.perKm} ₦/km · base {formatNaira(rt.basePrice)}
                         </p>
                       </motion.div>

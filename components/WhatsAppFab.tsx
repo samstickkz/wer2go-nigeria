@@ -21,7 +21,7 @@ export default function WhatsAppFab() {
       className="fixed bottom-5 right-5 sm:bottom-6 sm:right-6 z-40 group flex items-center gap-3"
     >
       <span className="hidden sm:flex flex-col rounded-2xl bg-white px-4 py-2.5 ring-1 ring-charcoal/10 leading-tight">
-        <span className="text-[10px] uppercase tracking-wider text-charcoal/55 font-semibold">
+        <span className="text-[11px] sm:text-[10px] uppercase tracking-wider text-charcoal/55 font-semibold">
           Chat on WhatsApp
         </span>
         <span className="text-sm font-semibold text-charcoal">

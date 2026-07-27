@@ -70,7 +70,7 @@ export default function BlogPosts() {
                     sizes="(min-width: 768px) 33vw, 100vw"
                     className="object-cover object-center group-hover:scale-105 transition-transform duration-700"
                   />
-                  <span className="absolute bottom-2 right-2 rounded-full bg-charcoal/65 backdrop-blur px-2 py-0.5 text-[10px] uppercase tracking-wider font-medium text-white">
+                  <span className="absolute bottom-2 right-2 rounded-full bg-charcoal/65 backdrop-blur px-2 py-0.5 text-[11px] sm:text-[10px] uppercase tracking-wider font-medium text-white">
                     {p.imageAlt}
                   </span>
                 </div>

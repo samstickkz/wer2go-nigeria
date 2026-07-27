@@ -43,7 +43,7 @@ function RotatingGreeting() {
   const g = GREETINGS[i];
   return (
     <p
-      className="h-5 mb-4 text-sm text-charcoal/60"
+      className="h-5 mb-0 sm:mb-4 text-sm text-charcoal/60"
       aria-live="polite"
     >
       <AnimatePresence mode="wait" initial={false}>
@@ -90,7 +90,7 @@ function MainSlideVisual() {
       </motion.div>
 
       <div className="absolute -bottom-3 sm:bottom-4 left-2 sm:left-6 lg:-left-4 rounded-2xl bg-white px-4 py-3 ring-1 ring-charcoal/10">
-        <p className="text-[10px] uppercase tracking-wider text-charcoal/55">
+        <p className="text-[11px] sm:text-[10px] uppercase tracking-wider text-charcoal/55">
           Estimated fare
         </p>
         <p className="mt-0.5 font-display font-semibold text-charcoal">
@@ -102,7 +102,7 @@ function MainSlideVisual() {
       </div>
 
       <div className="hidden sm:block absolute top-6 right-4 lg:right-6 rounded-2xl bg-white px-4 py-3 ring-1 ring-charcoal/10">
-        <p className="text-[10px] uppercase tracking-wider text-charcoal/55">
+        <p className="text-[11px] sm:text-[10px] uppercase tracking-wider text-charcoal/55">
           Driver arriving
         </p>
         <p className="mt-0.5 font-display font-semibold text-charcoal">
@@ -243,14 +243,16 @@ export default function Hero() {
             aria-label={`${index + 1} of ${total}: ${current.ariaLabel}`}
           >
             <div className="lg:col-span-6">
-              <RotatingGreeting />
+              <div className="flex flex-wrap items-center gap-x-3 gap-y-2 sm:block">
+                <RotatingGreeting />
 
-              <span
-                className={`inline-flex items-center gap-2 rounded-full px-3 py-1.5 text-xs font-medium ${current.pillBg}`}
-              >
-                {current.pillIcon}
-                {current.pillLabel}
-              </span>
+                <span
+                  className={`inline-flex items-center gap-2 rounded-full px-3 py-1.5 text-xs font-medium ${current.pillBg}`}
+                >
+                  {current.pillIcon}
+                  {current.pillLabel}
+                </span>
+              </div>
 
               <h1 className="mt-6 font-display font-bold text-charcoal leading-[1.02] tracking-tight text-4xl sm:text-5xl lg:text-[64px]">
                 {current.title}

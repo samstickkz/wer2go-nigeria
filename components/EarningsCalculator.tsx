@@ -61,7 +61,7 @@ function Slider({
         aria-label={label}
         className="mt-4 w-full accent-brand"
       />
-      <div className="mt-1 flex justify-between text-[10px] text-charcoal/45 font-medium">
+      <div className="mt-1 flex justify-between text-[11px] sm:text-[10px] text-charcoal/45 font-medium">
         <span>
           {min}
           {suffix}
@@ -156,7 +156,7 @@ export default function EarningsCalculator() {
               </span>
 
               <div className="relative">
-                <p className="text-[10px] uppercase tracking-wider text-highlight font-semibold">
+                <p className="text-[11px] sm:text-[10px] uppercase tracking-wider text-highlight font-semibold">
                   Take-home — every week
                 </p>
                 <motion.p
@@ -178,7 +178,7 @@ export default function EarningsCalculator() {
 
                 <div className="mt-7 grid grid-cols-2 gap-3">
                   <div className="rounded-2xl bg-white/8 ring-1 ring-white/10 p-4">
-                    <p className="text-[10px] uppercase tracking-wider text-white/55 font-semibold">
+                    <p className="text-[11px] sm:text-[10px] uppercase tracking-wider text-white/55 font-semibold">
                       Per month
                     </p>
                     <p className="mt-1 font-display font-semibold text-white text-xl tabular-nums">
@@ -186,7 +186,7 @@ export default function EarningsCalculator() {
                     </p>
                   </div>
                   <div className="rounded-2xl bg-white/8 ring-1 ring-white/10 p-4">
-                    <p className="text-[10px] uppercase tracking-wider text-white/55 font-semibold">
+                    <p className="text-[11px] sm:text-[10px] uppercase tracking-wider text-white/55 font-semibold">
                       Per year
                     </p>
                     <p className="mt-1 font-display font-semibold text-white text-xl tabular-nums">

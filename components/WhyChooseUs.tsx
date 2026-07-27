@@ -58,7 +58,7 @@ export default function WhyChooseUs() {
               <div className="absolute inset-0 bg-gradient-to-t from-teal-deep/30 to-transparent" />
               <div className="absolute bottom-5 left-5 right-5 flex items-center justify-between">
                 <div className="rounded-2xl bg-white/95 backdrop-blur px-4 py-2.5">
-                  <p className="text-[10px] uppercase tracking-wider text-charcoal/55">
+                  <p className="text-[11px] sm:text-[10px] uppercase tracking-wider text-charcoal/55">
                     Driver
                   </p>
                   <p className="font-display font-semibold text-charcoal text-sm">
@@ -66,7 +66,7 @@ export default function WhyChooseUs() {
                   </p>
                 </div>
                 <div className="hidden sm:block rounded-2xl bg-white/95 backdrop-blur px-4 py-2.5">
-                  <p className="text-[10px] uppercase tracking-wider text-charcoal/55">
+                  <p className="text-[11px] sm:text-[10px] uppercase tracking-wider text-charcoal/55">
                     Vehicle
                   </p>
                   <p className="font-display font-semibold text-charcoal text-sm">

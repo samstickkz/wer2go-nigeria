@@ -159,7 +159,7 @@ export default function DriveWithUs() {
                   <div className="rounded-2xl bg-white/95 backdrop-blur p-4 text-charcoal">
                     <div className="flex items-end justify-between">
                       <div>
-                        <p className="text-[10px] uppercase tracking-wider text-charcoal/55 font-semibold">
+                        <p className="text-[11px] sm:text-[10px] uppercase tracking-wider text-charcoal/55 font-semibold">
                           Adamu O. · 4.9★
                         </p>
                         <p className="mt-1 font-display font-bold text-2xl">
@@ -170,7 +170,7 @@ export default function DriveWithUs() {
                         </p>
                       </div>
                       <div className="text-right">
-                        <p className="text-[10px] uppercase tracking-wider text-charcoal/55 font-semibold">
+                        <p className="text-[11px] sm:text-[10px] uppercase tracking-wider text-charcoal/55 font-semibold">
                           Paid out
                         </p>
                         <p className="mt-1 font-display font-semibold text-sm">
@@ -196,10 +196,10 @@ export default function DriveWithUs() {
                       aria-hidden="true"
                     />
                   </div>
-                  <p className="mt-1.5 text-[9px] uppercase tracking-wider text-charcoal/55 font-semibold">
+                  <p className="mt-1.5 text-[11px] uppercase tracking-wider text-charcoal/55 font-semibold">
                     Scan to apply
                   </p>
-                  <p className="text-[10px] font-display font-semibold text-charcoal">
+                  <p className="text-[11px] sm:text-[10px] font-display font-semibold text-charcoal">
                     driver.gower2.com
                   </p>
                 </motion.div>

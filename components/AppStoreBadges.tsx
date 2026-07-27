@@ -24,7 +24,7 @@ export function AppStoreBadge({ href = APPS_URL }: BadgeProps) {
         <path d="M17.05 12.62a4.85 4.85 0 0 1 2.42-4.07 4.94 4.94 0 0 0-3.9-2.1c-1.65-.17-3.23.97-4.07.97-.85 0-2.14-.95-3.52-.93A5.18 5.18 0 0 0 3.6 9.16C1.74 12.4 3.12 17.18 4.9 19.8c.88 1.28 1.92 2.72 3.29 2.67 1.32-.05 1.82-.85 3.42-.85 1.6 0 2.05.85 3.45.83 1.43-.02 2.33-1.3 3.21-2.6a11.5 11.5 0 0 0 1.46-3 4.7 4.7 0 0 1-2.68-4.23ZM14.5 4.77A4.78 4.78 0 0 0 15.6 1.4a4.86 4.86 0 0 0-3.14 1.62 4.55 4.55 0 0 0-1.13 3.25 4.02 4.02 0 0 0 3.17-1.5Z" />
       </svg>
       <span className="flex flex-col leading-tight text-left">
-        <span className="text-[9px] sm:text-[10px] uppercase tracking-wider text-white/70 whitespace-nowrap">
+        <span className="text-[11px] sm:text-[11px] sm:text-[10px] uppercase tracking-wider text-white/70 whitespace-nowrap">
           Download on the
         </span>
         <span className="text-sm sm:text-base font-semibold whitespace-nowrap">App Store</span>
@@ -70,7 +70,7 @@ export function GooglePlayBadge({ href = APPS_URL }: BadgeProps) {
         <path d="m20.9 13.34-3.1 1.31L14 12l3.8-2.65 3.1 1.31a1.5 1.5 0 0 1 0 2.68Z" fill="url(#gp2)" />
       </svg>
       <span className="flex flex-col leading-tight text-left">
-        <span className="text-[9px] sm:text-[10px] uppercase tracking-wider text-white/70 whitespace-nowrap">
+        <span className="text-[11px] sm:text-[11px] sm:text-[10px] uppercase tracking-wider text-white/70 whitespace-nowrap">
           Get it on
         </span>
         <span className="text-sm sm:text-base font-semibold whitespace-nowrap">Google Play</span>

@@ -59,7 +59,7 @@ export default function ReferralCallout() {
                 </p>
                 <ul className="mt-5 grid grid-cols-2 gap-2 max-w-md">
                   <li className="rounded-xl bg-white/12 backdrop-blur px-3 py-2 ring-1 ring-white/15">
-                    <p className="text-[10px] uppercase tracking-wider text-white/65 font-semibold">
+                    <p className="text-[11px] sm:text-[10px] uppercase tracking-wider text-white/65 font-semibold">
                       You get
                     </p>
                     <p className="font-display font-bold text-white text-xl">
@@ -67,7 +67,7 @@ export default function ReferralCallout() {
                     </p>
                   </li>
                   <li className="rounded-xl bg-white/12 backdrop-blur px-3 py-2 ring-1 ring-white/15">
-                    <p className="text-[10px] uppercase tracking-wider text-white/65 font-semibold">
+                    <p className="text-[11px] sm:text-[10px] uppercase tracking-wider text-white/65 font-semibold">
                       They get
                     </p>
                     <p className="font-display font-bold text-white text-xl">
@@ -79,7 +79,7 @@ export default function ReferralCallout() {
 
               <div className="lg:w-[360px] shrink-0">
                 <div className="rounded-2xl bg-white/12 backdrop-blur ring-1 ring-white/20 p-4 sm:p-5">
-                  <p className="text-[10px] uppercase tracking-wider text-white/65 font-semibold">
+                  <p className="text-[11px] sm:text-[10px] uppercase tracking-wider text-white/65 font-semibold">
                     Your sample code
                   </p>
                   <div className="mt-2 flex items-center gap-2">
