@@ -1,10 +1,12 @@
 /**
- * Canonical site config. Set NEXT_PUBLIC_SITE_URL in Vercel once a custom
- * domain (e.g. wer2go.ng / ng.gower2.com) is attached — everything below
- * (canonicals, sitemap, OG tags, JSON-LD) follows automatically.
+ * Canonical site config. ng.gower2.com is the live custom domain (SSL active
+ * 2026-07-27) and the ONLY URL Google should index — canonicals, sitemap, OG
+ * tags and JSON-LD all follow this constant. The wer2go-nigeria.vercel.app
+ * deployment 301s here (see next.config.mjs) so the two never compete.
+ * NEXT_PUBLIC_SITE_URL still overrides it if the domain ever changes.
  */
 export const SITE_URL = (
-  process.env.NEXT_PUBLIC_SITE_URL || "https://wer2go-nigeria.vercel.app"
+  process.env.NEXT_PUBLIC_SITE_URL || "https://ng.gower2.com"
 ).replace(/\/$/, "");
 
 export const SITE_NAME = "wer2 GO Nigeria";
