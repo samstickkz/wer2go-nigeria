@@ -148,7 +148,7 @@ export default function Navbar() {
             href={APPS_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 rounded-full bg-brand px-4 sm:px-5 py-2.5 text-sm font-semibold text-charcoal hover:bg-brand-dark transition-colors active:scale-[0.98]"
+            className="inline-flex items-center gap-2 rounded-full bg-brand px-4 sm:px-5 py-3 text-sm font-semibold text-charcoal hover:bg-brand-dark transition-colors active:scale-[0.98]"
           >
             <Smartphone className="h-4 w-4" aria-hidden="true" />
             <span className="hidden sm:inline">Download app</span>

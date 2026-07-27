@@ -107,7 +107,7 @@ export default function Footer() {
                       target: "_blank",
                       rel: "noopener noreferrer",
                     })}
-                    className="inline-flex min-h-11 items-center gap-1 py-2.5 text-charcoal/70 hover:text-brand transition-colors"
+                    className="inline-flex min-h-11 items-center gap-1 py-3 text-charcoal/70 hover:text-brand transition-colors"
                   >
                     <ChevronRight className="h-3.5 w-3.5 text-brand" aria-hidden="true" />
                     {l.label}
