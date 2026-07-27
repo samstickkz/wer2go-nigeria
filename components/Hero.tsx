@@ -20,6 +20,7 @@ import {
   ChevronRight,
 } from "lucide-react";
 import { AppStoreBadge, GooglePlayBadge } from "./AppStoreBadges";
+import { APPS_URL } from "@/lib/site";
 
 const AUTO_ADVANCE_MS = 7000;
 
@@ -149,8 +150,8 @@ const slides: SlideData[] = [
     body: "wer2 GO is the ride-hailing app built for Nigeria — NIN-verified drivers.",
     primaryCta: (
       <div className="flex flex-wrap items-center gap-3">
-        <AppStoreBadge />
-        <GooglePlayBadge />
+        <AppStoreBadge href={APPS_URL} />
+        <GooglePlayBadge href={APPS_URL} />
       </div>
     ),
     trust: (

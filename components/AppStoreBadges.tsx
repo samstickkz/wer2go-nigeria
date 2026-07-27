@@ -1,3 +1,5 @@
+import { APPS_URL } from "@/lib/site";
+
 type BadgeProps = { href?: string };
 
 const ext = (href: string) =>
@@ -5,7 +7,7 @@ const ext = (href: string) =>
     ? { target: "_blank", rel: "noopener noreferrer" }
     : {};
 
-export function AppStoreBadge({ href = "#ios" }: BadgeProps) {
+export function AppStoreBadge({ href = APPS_URL }: BadgeProps) {
   return (
     <a
       href={href}
@@ -31,7 +33,7 @@ export function AppStoreBadge({ href = "#ios" }: BadgeProps) {
   );
 }
 
-export function GooglePlayBadge({ href = "#android" }: BadgeProps) {
+export function GooglePlayBadge({ href = APPS_URL }: BadgeProps) {
   return (
     <a
       href={href}
