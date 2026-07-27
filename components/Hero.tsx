@@ -149,7 +149,7 @@ const slides: SlideData[] = [
     ),
     body: "wer2 GO is the ride-hailing app built for Nigeria — NIN-verified drivers.",
     primaryCta: (
-      <div className="flex flex-wrap items-center gap-3">
+      <div className="flex items-center gap-2 sm:gap-3">
         <AppStoreBadge href={APPS_URL} />
         <GooglePlayBadge href={APPS_URL} />
       </div>

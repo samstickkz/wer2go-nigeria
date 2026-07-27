@@ -23,7 +23,7 @@ export default function FindCities() {
                 anywhere from Lagos to Maiduguri.
               </p>
 
-              <div className="mt-7 flex flex-wrap items-center gap-3">
+              <div className="mt-7 flex items-center gap-2 sm:gap-3">
                 <AppStoreBadge href={APPS_URL} />
                 <GooglePlayBadge href={APPS_URL} />
               </div>
