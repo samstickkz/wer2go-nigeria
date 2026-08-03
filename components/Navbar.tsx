@@ -10,11 +10,7 @@ const links = [
   { href: "#home", label: "Home", external: false },
   { href: "#how", label: "How it works", external: false },
   { href: "#why", label: "Why wer2 GO", external: false },
-  {
-    href: "https://driver.gower2.com",
-    label: "Drive",
-    external: true,
-  },
+  { href: "/drive", label: "Drive", external: false },
   { href: "#contact", label: "Contact", external: false },
 ];
 

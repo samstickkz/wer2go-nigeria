@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import {
@@ -112,6 +113,12 @@ export default function DriveWithUs() {
                 Become a driver
                 <ArrowRight className="h-4 w-4" aria-hidden="true" />
               </motion.a>
+              <Link
+                href="/drive"
+                className="inline-flex items-center gap-1.5 rounded-full border border-white/25 px-5 py-3 text-sm font-medium text-white/90 hover:bg-white/10 transition-colors"
+              >
+                How driving works
+              </Link>
             </div>
 
             <p className="mt-5 text-xs text-white/70 flex items-center gap-2">
