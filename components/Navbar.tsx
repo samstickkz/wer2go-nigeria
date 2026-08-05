@@ -11,6 +11,7 @@ const links = [
   { href: "#how", label: "How it works", external: false },
   { href: "#why", label: "Why wer2 GO", external: false },
   { href: "/drive", label: "Drive", external: false },
+  { href: "#faq", label: "FAQ", external: false },
   { href: "#contact", label: "Contact", external: false },
 ];
 
