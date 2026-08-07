@@ -12,7 +12,7 @@ export const SITE_URL = (
 export const SITE_NAME = "wer2 GO Nigeria";
 
 export const SITE_DESCRIPTION =
-  "Book a ride in Nigeria with wer2 GO — verified drivers, upfront fare estimates and in-app SOS. Drivers keep more with a 10% commission. Live in Abuja, Port Harcourt, Uyo and Kano.";
+  "Book a ride with wer2 GO — verified drivers, upfront fare estimates and in-app SOS. Live in Lagos, Abuja, Port Harcourt, Uyo and Kano. Drivers keep 90%.";
 
 /** Cities we actively serve — used for sitemap, JSON-LD areaServed and copy. */
 export const CITIES = [
