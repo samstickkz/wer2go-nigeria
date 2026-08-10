@@ -32,6 +32,8 @@ export const metadata: Metadata = {
     description: metaDescription,
     url,
     type: "website",
+    siteName: SITE_NAME,
+    locale: "en_NG",
     images: [
       { url: "/brand/car-comfort.jpg", alt: "Drive with wer2 GO in Nigeria" },
     ],

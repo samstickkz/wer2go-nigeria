@@ -17,6 +17,8 @@ import { Reveal } from "@/components/Reveal";
 import { CITIES, CITY_SLUGS, getCity } from "@/lib/cities";
 import { SITE_URL, SITE_NAME, APPS_URL, CONTACT_EMAIL } from "@/lib/site";
 
+const OG_LOCALE = "en_NG";
+
 // Only the cities we actually list render; any other path 404s.
 export const dynamicParams = false;
 
@@ -37,15 +39,17 @@ export function generateMetadata({
     description: city.metaDescription,
     alternates: { canonical: `/${city.slug}` },
     openGraph: {
-      title: city.metaTitle,
+      title: `${city.metaTitle} | ${SITE_NAME}`,
       description: city.metaDescription,
       url,
       type: "website",
+      siteName: SITE_NAME,
+      locale: OG_LOCALE,
       images: [{ url: city.heroImage, alt: city.heroAlt }],
     },
     twitter: {
       card: "summary_large_image",
-      title: city.metaTitle,
+      title: `${city.metaTitle} | ${SITE_NAME}`,
       description: city.metaDescription,
       images: [city.heroImage],
     },
@@ -91,7 +95,7 @@ export default function CityPage({ params }: { params: { city: string } }) {
           name: city.name,
           containedInPlace: { "@type": "Country", name: "Nigeria" },
         },
-        provider: { "@type": "Organization", name: "wer2 GO", url: SITE_URL },
+        provider: { "@id": `${SITE_URL}/#organization` },
         url,
       },
       {

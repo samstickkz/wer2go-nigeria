@@ -33,7 +33,7 @@ export const CITIES: City[] = [
     descriptor: "Nigeria's capital",
     metaTitle: "Book a Ride in Abuja — Ride-Hailing App",
     metaDescription:
-      "Book a ride in Abuja with wer2 GO — NIN-verified drivers, upfront fare estimates and in-app SOS. From the Central Business District to Maitama, Wuse II, Gwarinpa and the airport.",
+      "Book a ride in Abuja with wer2 GO — NIN-verified drivers, upfront fare estimates and in-app SOS. Serving the CBD, Maitama, Wuse II, Gwarinpa and the airport.",
     intro:
       "wer2 GO moves riders across the Federal Capital Territory — from the ministries of the Central Business District to the calm streets of Maitama and the fast-growing suburbs out toward Gwarinpa and Kubwa. Book in seconds, see your fare estimate before you ride, and travel with a driver verified by NIN and BVN.",
     heroImage: "/brand/ng-aso-rock.jpg",
@@ -87,9 +87,9 @@ export const CITIES: City[] = [
     name: "Port Harcourt",
     state: "Rivers State",
     descriptor: "the Garden City",
-    metaTitle: "Book a Ride in Port Harcourt — Ride-Hailing App",
+    metaTitle: "Book a Ride in Port Harcourt — Ride App",
     metaDescription:
-      "Book a ride in Port Harcourt with wer2 GO — verified drivers, upfront fare estimates and in-app SOS. From GRA and Trans-Amadi to D-Line, Rumuokoro and the airport.",
+      "Book a ride in Port Harcourt with wer2 GO — verified drivers, upfront fare estimates and in-app SOS. From GRA and Trans-Amadi to D-Line and the airport.",
     intro:
       "In the Garden City, wer2 GO gets you door to door — from the offices of Old and New GRA to the workshops of Trans-Amadi and the busy junctions of Diobu. Beat the go-slow with an upfront fare estimate and a driver you can see before they arrive.",
     heroImage: "/brand/ng-port-harcourt.jpg",
@@ -198,7 +198,7 @@ export const CITIES: City[] = [
     descriptor: "the commercial heart of northern Nigeria",
     metaTitle: "Book a Ride in Kano — Ride-Hailing App",
     metaDescription:
-      "Book a ride in Kano with wer2 GO — verified drivers, upfront fare estimates, Hausa support and women-only Sannu rides. From Sabon Gari and Bompai to Nassarawa GRA and the airport.",
+      "Book a ride in Kano with wer2 GO — verified drivers, fare estimates, Hausa support and women-only Sannu rides. From Sabon Gari to Nassarawa GRA and the airport.",
     intro:
       "Kano is the commercial engine of the North, and wer2 GO keeps it moving — from the markets of Sabon Gari and Fagge to Bompai and the quiet of Nassarawa GRA. Book in Hausa or English, see your fare estimate up front, and ride with a verified driver — including women-only Sannu rides.",
     heroImage: "/brand/car-premium.jpg",
@@ -253,7 +253,7 @@ export const CITIES: City[] = [
     descriptor: "Nigeria's largest city",
     metaTitle: "Book a Ride in Lagos — Ride-Hailing App",
     metaDescription:
-      "Book a ride in Lagos with wer2 GO — verified drivers, upfront fare estimates and in-app SOS. Across the Island and Mainland, from Lekki and Victoria Island to Ikeja and the airport.",
+      "Book a ride in Lagos with wer2 GO — verified drivers, upfront fare estimates and in-app SOS. Across the Island and Mainland, Lekki to Ikeja and the airport.",
     intro:
       "From the Island to the Mainland, wer2 GO takes on the Lagos go-slow — Victoria Island, Ikoyi and Lekki on one side, Ikeja, Surulere and Yaba on the other. See your fare estimate before you commit and ride with a driver you can check first.",
     heroImage: "/brand/ng-lekki-bridge.jpg",

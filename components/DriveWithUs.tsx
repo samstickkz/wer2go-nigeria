@@ -207,7 +207,7 @@ export default function DriveWithUs() {
                     Scan to apply
                   </p>
                   <p className="text-[11px] sm:text-[10px] font-display font-semibold text-charcoal">
-                    driver.gower2.com
+                    {DRIVER_URL.replace(/^https?:\/\//, "")}
                   </p>
                 </motion.div>
               )}

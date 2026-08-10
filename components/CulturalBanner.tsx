@@ -45,7 +45,7 @@ const moments: Moment[] = [
     emoji: "🇳🇬",
     greeting: "Happy Independence Day",
     message: "Riding free for 66 lucky Naija customers this 1st October.",
-    cta: { label: "How to enter", href: "#promo" },
+    cta: { label: "How to enter", href: "https://wa.me/97431531600" },
   },
   {
     from: "2026-12-24",

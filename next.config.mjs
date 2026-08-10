@@ -1,12 +1,5 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  images: {
-    remotePatterns: [
-      { protocol: "https", hostname: "ui-avatars.com" },
-      { protocol: "https", hostname: "picsum.photos" },
-      { protocol: "https", hostname: "images.unsplash.com" },
-    ],
-  },
   async redirects() {
     return [
       // The .vercel.app deployment URLs are a duplicate of the real site. Send

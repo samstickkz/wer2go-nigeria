@@ -2,18 +2,17 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { ChevronDown, Smartphone, ExternalLink, Menu, X } from "lucide-react";
 import { APPS_URL } from "@/lib/site";
+import { CITY_SLUGS } from "@/lib/cities";
 
-const links = [
-  { href: "#home", label: "Home", external: false },
-  { href: "#how", label: "How it works", external: false },
-  { href: "#why", label: "Why wer2 GO", external: false },
-  { href: "/drive", label: "Drive", external: false },
-  { href: "#faq", label: "FAQ", external: false },
-  { href: "#contact", label: "Contact", external: false },
-];
+// Home/How/Why sections only exist on "/" — "/#id" still same-document-scrolls
+// when already there, and correctly navigates+scrolls from every other page.
+// FAQ has its own id="faq" on "/", "/drive" and every city page, so it stays
+// a same-page anchor there; only pages without that section need "/#faq".
+const PAGES_WITH_FAQ_SECTION = ["/", "/drive", ...CITY_SLUGS.map((s) => `/${s}`)];
 
 const languages = [
   { code: "EN", label: "English" },
@@ -23,6 +22,18 @@ const languages = [
 ] as const;
 
 export default function Navbar() {
+  const pathname = usePathname();
+  const faqHref = PAGES_WITH_FAQ_SECTION.includes(pathname) ? "#faq" : "/#faq";
+
+  const links = [
+    { href: "/#home", label: "Home", external: false },
+    { href: "/#how", label: "How it works", external: false },
+    { href: "/#why", label: "Why wer2 GO", external: false },
+    { href: "/drive", label: "Drive", external: false },
+    { href: faqHref, label: "FAQ", external: false },
+    { href: "#contact", label: "Contact", external: false },
+  ];
+
   const [scrolled, setScrolled] = useState(false);
   const [lang, setLang] = useState<(typeof languages)[number]["code"]>("EN");
   const [langOpen, setLangOpen] = useState(false);

@@ -1,18 +1,40 @@
 import type { Metadata } from "next";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import { SITE_URL, SITE_NAME, CONTACT_EMAIL } from "@/lib/site";
+
+const PAGE_PATH = "/privacy-policy";
+const metaTitle = "Privacy Policy";
+const metaDescription =
+  "How wer2 GO collects, uses, stores and protects your personal data when you use the wer2 GO ride-hailing app and website in Nigeria.";
 
 export const metadata: Metadata = {
-  title: "Privacy Policy",
-  description:
-    "How wer2 GO collects, uses, stores and protects your personal data when you use the wer2 GO ride-hailing app and website in Nigeria.",
-  alternates: { canonical: "/privacy-policy" },
+  title: metaTitle,
+  description: metaDescription,
+  alternates: { canonical: PAGE_PATH },
   openGraph: {
-    title: "Privacy Policy | wer2 GO Nigeria",
+    title: `${metaTitle} | ${SITE_NAME}`,
     description:
       "How wer2 GO collects, uses and protects your personal data in Nigeria.",
-    url: "/privacy-policy",
+    url: `${SITE_URL}${PAGE_PATH}`,
     type: "article",
+    siteName: SITE_NAME,
+    locale: "en_NG",
+    images: [
+      {
+        url: "/brand/hero-car.png",
+        width: 1920,
+        height: 1080,
+        alt: "wer2 GO — ride-hailing in Nigeria",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: `${metaTitle} | ${SITE_NAME}`,
+    description:
+      "How wer2 GO collects, uses and protects your personal data in Nigeria.",
+    images: ["/brand/hero-car.png"],
   },
 };
 
@@ -30,6 +52,13 @@ function H3({ children }: { children: React.ReactNode }) {
     <h3 className="font-display font-semibold text-lg text-charcoal mt-7 mb-2">
       {children}
     </h3>
+  );
+}
+function H4({ children }: { children: React.ReactNode }) {
+  return (
+    <h4 className="font-display font-semibold text-base text-charcoal mt-5 mb-2">
+      {children}
+    </h4>
   );
 }
 function P({ children }: { children: React.ReactNode }) {
@@ -144,7 +173,7 @@ export default function PrivacyPolicy() {
 
           <H2>2. Collecting and Using Your Personal Data</H2>
           <H3>2.1 Types of Data Collected</H3>
-          <H3>2.1.1 Personal Data</H3>
+          <H4>2.1.1 Personal Data</H4>
           <P>
             While using our Service, we may ask you to provide us with certain
             personally identifiable information that can be used to contact or
@@ -161,7 +190,7 @@ export default function PrivacyPolicy() {
               "Usage Data",
             ]}
           />
-          <H3>2.1.2 Usage Data</H3>
+          <H4>2.1.2 Usage Data</H4>
           <P>Usage Data is collected automatically when using the Service.</P>
           <P>
             Usage Data may include information such as your Device&rsquo;s
@@ -287,10 +316,10 @@ export default function PrivacyPolicy() {
             If you have any questions about this Privacy Policy, you can contact
             us at{" "}
             <a
-              href="mailto:contact@gower2.com"
+              href={`mailto:${CONTACT_EMAIL}`}
               className="font-semibold text-brand hover:underline"
             >
-              contact@gower2.com
+              {CONTACT_EMAIL}
             </a>
             .
           </P>

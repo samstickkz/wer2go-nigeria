@@ -11,16 +11,15 @@ import {
   Send,
 } from "lucide-react";
 import { Reveal } from "./Reveal";
-import { APPS_URL } from "@/lib/site";
+import { APPS_URL, DRIVER_URL, CONTACT_EMAIL } from "@/lib/site";
 
 const infoLinks = [
   { label: "Download the app", href: APPS_URL, external: true },
   {
     label: "Become a driver",
-    href: "https://driver.gower2.com",
+    href: DRIVER_URL,
     external: true,
   },
-  { label: "Press & news", href: "#press", external: false },
   { label: "Privacy policy", href: "/privacy-policy", external: false },
 ];
 
@@ -85,10 +84,10 @@ export default function Footer() {
               <li className="flex items-start gap-3">
                 <Mail className="h-4 w-4 mt-0.5 text-brand" aria-hidden="true" />
                 <a
-                  href="mailto:contact@gower2.com"
+                  href={`mailto:${CONTACT_EMAIL}`}
                   className="inline-block py-2.5 hover:text-brand"
                 >
-                  contact@gower2.com
+                  {CONTACT_EMAIL}
                 </a>
               </li>
             </ul>
