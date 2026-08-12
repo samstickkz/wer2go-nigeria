@@ -20,7 +20,7 @@ const steps: Step[] = [
   {
     Icon: Clock4,
     title: "See your fare estimate",
-    body: "Fair pricing.",
+    body: "Your fare shows before you confirm — based on real road distance, so there's no surprise when you arrive.",
     accent: true,
   },
   {
