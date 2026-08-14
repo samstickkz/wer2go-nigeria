@@ -15,6 +15,13 @@ import { Reveal } from "./Reveal";
 import { APPS_URL, CONTACT_EMAIL } from "@/lib/site";
 import { CITIES } from "@/lib/cities";
 
+// Built from CITIES so the blurb can never drift from the cities we actually
+// serve — wer2 GO is live in these 5 only, NOT nationwide.
+const CITY_NAMES = CITIES.map((c) => c.name);
+const CITY_PHRASE = `${CITY_NAMES.slice(0, -1).join(", ")} and ${
+  CITY_NAMES[CITY_NAMES.length - 1]
+}`;
+
 const infoLinks = [
   { label: "Download the app", href: APPS_URL, external: true },
   // Internal /drive, not the driver.gower2.com download — the page is what
@@ -73,7 +80,7 @@ export default function Footer() {
             <p className="mt-5 text-sm text-charcoal/65 leading-relaxed max-w-xs">
               wer2 GO is the ride-hailing app born in Doha and built for
               Nigeria. NIN-verified drivers, upfront fare estimates and an
-              in-app SOS on every trip — across every state.
+              in-app SOS on every trip — live in {CITY_PHRASE}.
             </p>
             <div className="mt-5 inline-flex items-center gap-2 rounded-full bg-white px-3 py-1.5 text-xs font-medium text-charcoal ring-1 ring-charcoal/10">
               🇳🇬 Proudly serving Naija

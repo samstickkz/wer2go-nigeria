@@ -131,7 +131,7 @@ const slides: SlideData[] = [
   {
     id: "main",
     watermark: "WER2",
-    ariaLabel: "Tap, ride and arrive anywhere in Nigeria",
+    ariaLabel: "Tap, ride and arrive across our Nigerian cities",
     pillBg: "bg-white ring-1 ring-charcoal/10",
     pillIcon: (
       <span className="relative flex h-2 w-2">
