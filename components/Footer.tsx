@@ -7,18 +7,22 @@ import {
   Users,
   MessageCircle,
   Mail,
+  MapPin,
   ChevronRight,
   Send,
 } from "lucide-react";
 import { Reveal } from "./Reveal";
-import { APPS_URL, DRIVER_URL, CONTACT_EMAIL } from "@/lib/site";
+import { APPS_URL, CONTACT_EMAIL } from "@/lib/site";
+import { CITIES } from "@/lib/cities";
 
 const infoLinks = [
   { label: "Download the app", href: APPS_URL, external: true },
+  // Internal /drive, not the driver.gower2.com download — the page is what
+  // ranks for driver-intent queries, and it carries the app links itself.
   {
-    label: "Become a driver",
-    href: DRIVER_URL,
-    external: true,
+    label: "Drive with wer2 GO",
+    href: "/drive",
+    external: false,
   },
   { label: "Privacy policy", href: "/privacy-policy", external: false },
 ];
@@ -138,6 +142,28 @@ export default function Footer() {
               ))}
             </ul>
           </Reveal>
+        </div>
+
+        {/* Sitewide link to every city page — /drive and /privacy-policy would
+            otherwise be dead ends, with the city pages reachable only from the
+            homepage and from each other. */}
+        <div className="border-t border-charcoal/10 py-8">
+          <h3 className="text-xs uppercase tracking-wider text-charcoal/55">
+            Cities we serve
+          </h3>
+          <ul className="mt-4 flex flex-wrap gap-2.5">
+            {CITIES.map((c) => (
+              <li key={c.slug}>
+                <a
+                  href={`/${c.slug}`}
+                  className="inline-flex min-h-11 items-center gap-1.5 rounded-full bg-white px-4 py-2 text-sm text-charcoal/75 ring-1 ring-charcoal/10 hover:text-brand hover:ring-brand/40 transition-colors"
+                >
+                  <MapPin className="h-3.5 w-3.5 text-brand" aria-hidden="true" />
+                  Ride in {c.name}
+                </a>
+              </li>
+            ))}
+          </ul>
         </div>
 
         <div className="border-t border-charcoal/10 py-6 flex flex-col sm:flex-row items-center justify-between gap-3">
