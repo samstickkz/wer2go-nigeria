@@ -1,12 +1,6 @@
-import { CITIES } from "./site";
+import { CITIES, joinWithAnd } from "./site";
 
 export type Faq = { q: string; a: string };
-
-/** "Abuja, Port Harcourt, Uyo, Kano and Lagos" */
-function joinWithAnd(items: readonly string[]): string {
-  if (items.length <= 1) return items.join("");
-  return `${items.slice(0, -1).join(", ")} and ${items[items.length - 1]}`;
-}
 
 /**
  * Homepage FAQ — ride-hailing search queries are heavily question-shaped

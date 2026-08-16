@@ -8,6 +8,7 @@ import {
   SITE_NAME,
   SITE_DESCRIPTION,
   CITIES,
+  CITIES_PHRASE,
   APPS_URL,
   CONTACT_EMAIL,
 } from "@/lib/site";
@@ -158,9 +159,7 @@ export default function RootLayout({
         areaServed: CITIES.map((c) => ({ "@type": "City", name: c })),
         // Kept in step with areaServed above — we serve these cities, not all
         // of Nigeria, so the description must not imply nationwide coverage.
-        description: `On-demand rides in ${CITIES.slice(0, -1).join(", ")} and ${
-          CITIES[CITIES.length - 1]
-        } with verified drivers, upfront fare estimates and in-app SOS.`,
+        description: `On-demand rides in ${CITIES_PHRASE} with verified drivers, upfront fare estimates and in-app SOS.`,
       },
       {
         "@type": "MobileApplication",
