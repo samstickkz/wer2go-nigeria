@@ -9,7 +9,7 @@ export default function CitiesServed() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10 py-14 sm:py-16">
         <Reveal>
           <p className="text-xs uppercase tracking-wider text-brand-dark font-semibold">
-            Live across Nigeria
+            Live in {CITIES.length} Nigerian cities
           </p>
           <h2 className="mt-3 font-display font-bold text-3xl sm:text-4xl text-charcoal">
             Cities we serve.

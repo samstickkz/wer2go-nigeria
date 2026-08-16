@@ -299,8 +299,8 @@ export default function DrivePage() {
               Where you can drive
             </h2>
             <p className="mt-3 max-w-2xl text-charcoal/65 leading-relaxed">
-              wer2 GO is live across Nigeria and growing. Tap a city to see how
-              rides work there.
+              wer2 GO is live in these {CITIES.length} cities and growing. Tap a
+              city to see how rides work there.
             </p>
           </Reveal>
           <Reveal className="mt-7">

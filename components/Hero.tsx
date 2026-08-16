@@ -21,6 +21,9 @@ import {
 } from "lucide-react";
 import { AppStoreBadge, GooglePlayBadge } from "./AppStoreBadges";
 import { APPS_URL } from "@/lib/site";
+// Count comes from the array that generates the city pages, so the pill can
+// never claim more coverage than we actually have.
+import { CITIES } from "@/lib/cities";
 
 const AUTO_ADVANCE_MS = 7000;
 
@@ -139,7 +142,7 @@ const slides: SlideData[] = [
         <span className="relative inline-flex h-2 w-2 rounded-full bg-brand" />
       </span>
     ),
-    pillLabel: "Live across Nigeria",
+    pillLabel: `Live in ${CITIES.length} Nigerian cities`,
     title: (
       <>
         Tap. Ride. Arrive.

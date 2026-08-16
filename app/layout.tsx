@@ -156,8 +156,11 @@ export default function RootLayout({
         serviceType: "Ride-hailing",
         provider: { "@id": `${SITE_URL}/#organization` },
         areaServed: CITIES.map((c) => ({ "@type": "City", name: c })),
-        description:
-          "On-demand rides across Nigeria with verified drivers, upfront fare estimates and in-app SOS.",
+        // Kept in step with areaServed above — we serve these cities, not all
+        // of Nigeria, so the description must not imply nationwide coverage.
+        description: `On-demand rides in ${CITIES.slice(0, -1).join(", ")} and ${
+          CITIES[CITIES.length - 1]
+        } with verified drivers, upfront fare estimates and in-app SOS.`,
       },
       {
         "@type": "MobileApplication",

@@ -175,7 +175,7 @@ export default function Footer() {
 
         <div className="border-t border-charcoal/10 py-6 flex flex-col sm:flex-row items-center justify-between gap-3">
           <p className="text-xs text-charcoal/55">
-            © 2026 wer2 GO. Operating in Doha, Qatar. Driven across Nigeria.
+            © 2026 wer2 GO. Operating in Doha, Qatar. On the road in Nigeria.
           </p>
           <ul className="flex items-center gap-3 text-[11px] uppercase tracking-wider text-charcoal/55">
             {["EN", "HA", "IG", "YO"].map((l, i, arr) => (
