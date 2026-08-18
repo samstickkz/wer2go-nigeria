@@ -2,7 +2,7 @@ import { Smartphone, QrCode } from "lucide-react";
 import { AppStoreBadge, GooglePlayBadge } from "./AppStoreBadges";
 import { Reveal } from "./Reveal";
 
-import { APPS_URL } from "@/lib/site";
+import { APPS_URL, CITIES_PHRASE } from "@/lib/site";
 
 export default function FindCities() {
   return (
@@ -19,8 +19,8 @@ export default function FindCities() {
               </h2>
               <p className="mt-4 max-w-xl text-base text-white/75 leading-relaxed">
                 Free on iOS and Android. Sign up with your Nigerian phone
-                number, verify with NIN, and you&apos;re ready to ride
-                anywhere from Lagos to Maiduguri.
+                number, verify with NIN, and you&apos;re ready to ride in{" "}
+                {CITIES_PHRASE}.
               </p>
 
               <div className="mt-7 flex items-center gap-2 sm:gap-3">
