@@ -1,4 +1,5 @@
-import { ChevronRight } from "lucide-react";
+import Link from "next/link";
+import { ChevronRight, ArrowRight } from "lucide-react";
 import { Reveal } from "./Reveal";
 import { HOMEPAGE_FAQS } from "@/lib/faqs";
 
@@ -28,6 +29,15 @@ export default function Faq() {
                 <ChevronRight className="h-5 w-5 flex-none text-brand-dark transition-transform group-open:rotate-90" />
               </summary>
               <p className="mt-3 text-charcoal/70 leading-relaxed">{f.a}</p>
+              {f.link && (
+                <Link
+                  href={f.link.href}
+                  className="mt-3 inline-flex items-center gap-1.5 text-sm font-semibold text-brand-dark hover:underline"
+                >
+                  {f.link.label}
+                  <ArrowRight className="h-3.5 w-3.5" aria-hidden="true" />
+                </Link>
+              )}
             </details>
           ))}
         </div>

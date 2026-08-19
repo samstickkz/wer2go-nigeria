@@ -1,6 +1,15 @@
 import { CITIES, joinWithAnd } from "./site";
 
-export type Faq = { q: string; a: string };
+/**
+ * Optional link rendered after an answer on the homepage (see Faq.tsx). Kept
+ * separate from `a` so the FAQPage JSON-LD `Answer.text` in app/page.tsx stays
+ * plain text — schema.org answers shouldn't carry markup.
+ */
+export type Faq = {
+  q: string;
+  a: string;
+  link?: { href: string; label: string };
+};
 
 /**
  * Homepage FAQ — ride-hailing search queries are heavily question-shaped
@@ -24,10 +33,12 @@ export const HOMEPAGE_FAQS: Faq[] = [
   {
     q: "Does wer2 GO have a women-only ride option?",
     a: "Yes — Sannu is our women-only ride option, matching a woman rider with a woman driver. It's currently available in Kano, with plans to bring it to more cities.",
+    link: { href: "/kano", label: "See wer2 GO in Kano" },
   },
   {
     q: "How do I become a wer2 GO driver?",
     a: "Download the wer2 GO driver app and verify your NIN and BVN at a wer2 GO hub. wer2 GO charges a 10% commission — one of the lowest in Nigeria — so you keep 90% of every fare, with earnings you can track from your first ride and payouts on request.",
+    link: { href: "/drive", label: "See how driving works" },
   },
   {
     q: "How do I contact wer2 GO support?",
