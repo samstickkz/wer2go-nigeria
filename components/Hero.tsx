@@ -143,14 +143,18 @@ const slides: SlideData[] = [
       </span>
     ),
     pillLabel: `Live in ${CITIES.length} Nigerian cities`,
+    // "Anywhere in Naija" was a nationwide coverage claim — false, we serve the
+    // cities in lib/cities.ts. It also left the homepage H1 with none of the
+    // language people actually search ("book a ride" is our top non-brand query
+    // in Search Console). The replacement fixes both without promising reach.
     title: (
       <>
         Tap. Ride. Arrive.
         <br />
-        <span className="text-brand">Anywhere in Naija.</span>
+        <span className="text-brand">Book a ride in Naija.</span>
       </>
     ),
-    body: "wer2 GO is the ride-hailing app built for Nigeria — NIN-verified drivers.",
+    body: "wer2 GO is the ride-hailing app built for Nigeria — see your fare estimate before you book, and check your driver before they arrive.",
     primaryCta: (
       <div className="flex items-center gap-2 sm:gap-3">
         <AppStoreBadge href={APPS_URL} />
