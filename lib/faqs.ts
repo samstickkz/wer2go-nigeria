@@ -19,6 +19,15 @@ export type Faq = {
  */
 export const HOMEPAGE_FAQS: Faq[] = [
   {
+    // Search Console shows a cluster of cost-shaped queries ("how much is a
+    // ride", "ride fee", "ride rates") that the homepage never answered — the
+    // per-city cost answers live in lib/cities.ts, but nothing on / used that
+    // wording. No figures here: fares are distance-based estimates, not a
+    // price list we can publish.
+    q: "How much does a wer2 GO ride cost in Nigeria?",
+    a: "There is no flat rate. Your fare is worked out from the real road distance between your pickup and your drop-off, so a short trip across town costs less than a run out to the airport. The app shows you the estimated fare for your exact trip before you confirm the booking, so you can check the price first.",
+  },
+  {
     q: "Is the fare I see before booking final?",
     a: "You'll see an estimated fare before you book, based on the real road distance for your trip. It's an estimate rather than a fixed amount, so it can vary slightly with the exact route or traffic — but there's no surge pricing and no surprise add-ons.",
   },

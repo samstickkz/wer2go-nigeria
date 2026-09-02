@@ -20,9 +20,9 @@ import { CITY_SLUGS } from "@/lib/cities";
  * adding a city still needs no edit here until its content is next changed.
  */
 const LAST_CONTENT_CHANGE: Record<string, string> = {
-  // 2026-08-28: hero H1 + intro rewritten (dropped the false "Anywhere in
-  // Naija" coverage claim; H1 now carries the "book a ride" query language).
-  "/": "2026-08-28",
+  // 2026-09-02: homepage FAQ gained a "how much does a ride cost" answer
+  // (rendered copy + FAQPage schema).
+  "/": "2026-09-02",
   // 2026-08-16: shared Footer city strip + derived five-city phrasing.
   "/drive": "2026-08-16",
   "/abuja": "2026-08-16",
