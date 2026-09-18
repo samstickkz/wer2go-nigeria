@@ -14,7 +14,7 @@ import {
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { Reveal } from "@/components/Reveal";
-import { CITIES, CITY_SLUGS, getCity } from "@/lib/cities";
+import { CITIES, CITY_SLUGS, getCity, type City } from "@/lib/cities";
 import { SITE_URL, SITE_NAME, APPS_URL, CONTACT_EMAIL } from "@/lib/site";
 
 const OG_LOCALE = "en_NG";
@@ -73,6 +73,32 @@ const perks = [
     body: "Real people on call in English, Hausa, Igbo and Yoruba.",
   },
 ];
+
+/**
+ * "How to book" steps. Step 2 uses the city's own first sample route so the
+ * section reads locally instead of repeating verbatim across the city pages.
+ */
+function bookingSteps(city: City) {
+  const [from, to] = city.routes[0];
+  return [
+    {
+      title: "Get the app",
+      body: "Download wer2 GO, sign up with your Nigerian phone number and verify with NIN.",
+    },
+    {
+      title: "Set pickup and drop-off",
+      body: `Drop your pin and enter where you're going, for example ${from} to ${to}.`,
+    },
+    {
+      title: "Check your fare estimate",
+      body: "See the estimated fare before you confirm, worked out from the real road distance.",
+    },
+    {
+      title: "Meet your driver",
+      body: "Your NIN- and BVN-verified driver's details, plate and rating show before they arrive.",
+    },
+  ];
+}
 
 export default function CityPage({ params }: { params: { city: string } }) {
   const city = getCity(params.city);
@@ -181,6 +207,43 @@ export default function CityPage({ params }: { params: { city: string } }) {
                 Common questions
               </a>
             </div>
+          </div>
+        </section>
+
+        {/* How to book */}
+        <section className="bg-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10 py-14 sm:py-16">
+            <Reveal>
+              <h2 className="font-display font-bold text-2xl sm:text-3xl text-charcoal">
+                How to book a ride in {city.name}
+              </h2>
+              <p className="mt-3 max-w-2xl text-charcoal/65 leading-relaxed">
+                Four steps from opening the app to getting picked up.
+              </p>
+            </Reveal>
+            <Reveal className="mt-8">
+              <ol className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
+                {bookingSteps(city).map((s, i) => (
+                  <li
+                    key={s.title}
+                    className="h-full rounded-3xl bg-cream p-6 ring-1 ring-charcoal/5"
+                  >
+                    <span
+                      className="inline-flex h-9 w-9 items-center justify-center rounded-full bg-brand font-display font-bold text-charcoal"
+                      aria-hidden="true"
+                    >
+                      {i + 1}
+                    </span>
+                    <h3 className="mt-4 font-display font-semibold text-charcoal">
+                      {s.title}
+                    </h3>
+                    <p className="mt-2 text-sm text-charcoal/65 leading-relaxed">
+                      {s.body}
+                    </p>
+                  </li>
+                ))}
+              </ol>
+            </Reveal>
           </div>
         </section>
 
